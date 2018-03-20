@@ -6,7 +6,7 @@ body {
 -moz-box-sizing: border-box;
 box-sizing: border-box;
 }
-.continer {
+.container {
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
