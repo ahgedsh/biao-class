@@ -28,3 +28,6 @@ a {
     text-decoration: none;
     color:#fff;
 }
+.col.right {
+    text-align: right;
+}
