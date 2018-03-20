@@ -1,5 +1,7 @@
 body {
     margin:0;
+    background-attachment: #eee;
+    color:#555;
 }
 * {
 -webkit-box-sizing: border-box;
@@ -7,12 +9,13 @@ body {
 box-sizing: border-box;
 }
 .container {
-    max-width: 1200px;
+    max-width: 900px;
     margin-left: auto;
     margin-right: auto;
 }
 .row {
     font-size: 0;
+    display: block;
 }
 .col {
     font-size: 15px;
@@ -26,7 +29,7 @@ img {
 }
 a {
     text-decoration: none;
-    color:#fff;
+    
 }
 .col.right {
     text-align: right;
