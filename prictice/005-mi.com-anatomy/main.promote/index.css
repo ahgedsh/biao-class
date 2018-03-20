@@ -1,18 +1,19 @@
-.main-promote  .cat {
+
+.main-promote .cat {
     background: rgba(0,0,0,0.8);
     width: 20%;
-
 }
 .main-promote .slider {
     width: 80%;
 }
-.main-promote  .cat a {
+.main-promote .cat a {
     color: #eee;
-    padding:8px 20px;
     display: block;
-    font-size: 76%;
+    padding: 8px 20px;
+    font-size: 75%; 
+
 }
 .main-promote .cat a:hover {
     background: rgba(0,0,0,0.8);
-    color: #fff;
+    color:#fff;
 }
