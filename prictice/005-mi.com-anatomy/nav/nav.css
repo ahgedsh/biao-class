@@ -2,19 +2,17 @@
 .nav {
     background: rgba(0,0,0,0.8);
 }
+.left, .right {
+    width: 50%;
+}
 .nav a {
-    
+    color:#eee;
     padding: 10px 5px;
     display: inline-block;
-    color: #eee;
     font-size: 80%;
-
-}
-
-
-.left, .right {
-    width: 50%;;
 }
 .nav a:hover {
     background: rgba(0,0,0,0.8);
+    color: #fff;
+
 }

@@ -1,22 +1,21 @@
 .main-promote {
     background-image: url(silder01.jpg);
-    background-color: #fae3b5;
+    background-color: bisque;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: contain;/*保持图像本身的宽高比例，将图片缩放到正好的位置*/
 }
 .main-promote .cat {
     background: rgba(0,0,0,0.8);
-    width:20%;
-}
-.main-promote .cat a {
-    color: #eee;
-    padding: 8px 20px;
-    display: block;
-    font-size: 75%;
+    width: 20%;
 
 }
-.main-promote .cat a:hover {
+.main-promote .cat a {
+    display: block;
+    color: #eee;
+    padding: 10px 6px;
+}
+.main-promote .cat a:hover{
     background: rgba(0,0,0,0.8);
     color: #fff;
 }
