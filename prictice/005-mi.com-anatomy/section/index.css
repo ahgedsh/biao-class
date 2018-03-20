@@ -1,0 +1,41 @@
+
+.section-cat .head .left,
+.section-cat .head .right {/* 标题左右各占50%*/
+    width: 50%;
+}
+.section-cat .head {/*标题那条加上下margin撑起来*/ 
+    margin:20 0;
+}
+.section-cat .head .title {/*字体放大为130%*/
+    font-size: 130%;
+}
+.card-group .card {/* 卡片组l里的卡片加背景色*/
+background: #fff;
+}
+.card-group .leader {/* 卡片组里的leader 占20%*/
+    width: 20%;
+}
+.card-group .others {/*卡片组里的其他占80%*/
+    width: 80%;
+}
+
+ .card .title { /*卡片里的标题 */
+    color: #000;
+    font-size: 90%;
+}
+.card .text {/*卡片里的文字居中，撑出10px*/
+    text-align: center;
+    padding: 10px;
+
+}
+.card .desc {/* 文字描述加颜色和字体占总体70%*/
+    color: #666;
+    font-size: 70%;
+
+
+
+}
+.card .price {/*卡片里的价格加颜色*/
+    color: peru;
+
+}
