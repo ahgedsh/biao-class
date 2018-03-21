@@ -1,33 +1,28 @@
 
 <style>
-    a {
-        text-decoration: none;
-
-    }
+     a {
+    text-decoration: none;
+    color: #333;
+  }
+  .nav-item a {
+    display: inline-block;
+    padding: 10px;
+  }
     .nav {
-        background: rgba(0,0,0,0.5);
+        background: rgba(0,0,0,.5);
     }
-    .nav-item a {
-        color: #eee;
+    .nav-item::after {
+        content: '';
+        width: 1px;
+        height: 20;
+        top: 5px;
         display: inline-block;
-        padding:10px;
-
-    }
-    .nav-item:after {
-        content: "";
-        width:1px;
-        height: 10px;
-        top:5px;
-        background: rgba(0,0,0,0.8);
         position: relative;
-        display: inline-block;
+        background: rgba(0,0,0,.5);
     }
     .nav-item:last-child:after {
-        display: none;
-    }
-
-    
-  
+    display: none;
+  }
 </style>
 
 <div class="nav">

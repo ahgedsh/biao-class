@@ -1,0 +1,94 @@
+ body {
+     margin: 0%;
+ }
+
+a {
+    color: #eee;
+    text-decoration: none;
+}
+
+.main {
+    background-image: url(bannerV2.jpg);
+    background-attachment: fixed;
+    background-size: 100%;
+    background-repeat: no-repeat;
+
+  
+  
+}
+
+
+.row {
+    font-size: 0;
+}
+
+.col {
+    font-size: 16px;
+    vertical-align: top;
+    display: inline-block;
+}
+ .container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-left: auto;
+} 
+h2 {
+    font-size: 270%;
+    margin-bottom: 0px;
+}
+.sm {
+    font-size: 20%;
+}
+
+
+.nav .right {
+    text-align: right;
+    width: 70%;
+    
+    
+}
+.nav .left {
+    width: 30%;
+}
+.right .top ,.right .bottom {
+padding: 20px;
+}
+.right .top {
+    font-size: 70%;
+}
+.right .bottom {
+    padding-top:0;
+    font-size: 100%;
+    padding-left: 45px;
+    font-weight: 900;
+
+    
+}
+
+.title {
+    text-align: center;
+
+}
+.title .top {
+    color: #fff;
+    display: block;
+    font-weight: 900;
+    font-size: 66px;
+
+   
+}
+.title .bottom {
+    color: #eee;
+    margin-top: 0px;
+}
+
+.search-bar {
+    text-align: left;
+    padding-left: 100px;
+}
+input {
+    padding:20px 280px;
+    
+
+}
+ 

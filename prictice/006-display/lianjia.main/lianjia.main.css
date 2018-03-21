@@ -1,0 +1,46 @@
+.main {
+    background-image: url(lianjia1.jpg);
+    
+}
+img {
+    max-width: 100%;
+}
+
+.container {
+    padding-left: 100px;
+}
+
+.second {
+    font-size: 49px;
+    font-weight: 900;
+    
+}
+
+.first {
+    font-size: 28px;
+    font-weight: 500;
+}
+
+.three {
+    border: 1px solid #fff;
+    width: 550px;
+    height: 80px;
+    
+}
+ input {
+    color:#eee;
+    background:green;
+    width: 118px;
+    height: 49px;
+    display: block;
+    margin-bottom: 10px;
+
+}
+img {
+    width: 130px;
+    height: 130px;
+    position: absolute;
+    top:170px;
+    left: 240px;
+    
+}
