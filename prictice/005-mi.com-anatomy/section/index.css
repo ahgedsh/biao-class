@@ -39,3 +39,24 @@ background: #fff;
     color: peru;
 
 }
+.row {
+    font-size: 0;
+    display: block;
+}
+.col {
+    font-size: 15px;
+    display: inline-block;
+    vertical-align: top;
+   
+
+}
+img {
+    max-width: 100%;
+}
+a {
+    text-decoration: none;
+    
+}
+.col.right {
+    text-align: right;
+}

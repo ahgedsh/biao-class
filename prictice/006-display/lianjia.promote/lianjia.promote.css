@@ -1,0 +1,39 @@
+.row {
+    font-size: 0;
+    display: block;
+}
+.col {
+    font-size: 15px;
+    display: inline-block;
+    vertical-align: top;
+   
+
+}
+img {
+    max-width: 100%;
+}
+a {
+    text-decoration: none;
+    color: black;
+    
+}
+.col.right {
+    text-align: right;
+}
+.promote .title .left,
+.promote .title .right {
+    width: 50%;
+}
+.promote .title {
+    margin: 20 0;
+}
+.promote .title .first {
+    font-size: 38px;;
+    font-weight: 700;
+}
+.card-group .card {
+    background: #eee;
+   
+    
+}
+
