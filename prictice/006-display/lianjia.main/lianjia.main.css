@@ -1,5 +1,11 @@
+body {
+    margin: 0px;
+}
 .main {
     background-image: url(lianjia1.jpg);
+    background-size: 150%;
+    min-height: 480px;
+    overflow: auto;
     
 }
 img {
@@ -19,6 +25,7 @@ img {
 .first {
     font-size: 28px;
     font-weight: 500;
+    margin-top: 50px;
 }
 
 .three {
@@ -40,7 +47,7 @@ img {
     width: 130px;
     height: 130px;
     position: absolute;
-    top:170px;
+    top:210px;
     left: 240px;
     
 }
