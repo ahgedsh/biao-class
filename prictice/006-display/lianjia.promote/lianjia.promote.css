@@ -32,8 +32,33 @@ a {
     font-weight: 700;
 }
 .card-group .card {
-    background: #eee;
+    background: #fff;
+    padding: 0 22px;
+    
    
     
 }
-
+.card .title {
+    text-align: center;
+    font-size: 19px;
+}
+.card .position {
+    text-align: center;
+}
+.text {
+    display: inline-block;
+    font-size: 18px;
+    padding-top: 10px;
+}
+.text .one {
+    padding-left: 70px;
+}
+.text .two {
+    padding-left: 200px;
+}
+.text .three {
+    padding-left: 200px;
+}
+.text .four {
+    padding-left: 200px;
+}
