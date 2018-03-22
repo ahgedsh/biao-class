@@ -1,84 +1,98 @@
-body {
-    margin: 0;
-}
-.container {
-    max-width: 1200px;
-    margin:0 auto;
-}
-
-* {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    }
-
-.row {
-     font-size: 0;
-     display: block;
- }
- .col{
-     font-size: 15px;
-     vertical-align: top;
-     display: inline-block;
- }
- .img {
-     width:100%;
- }
- a {
-     text-decoration: none;
-     color: #eee;
- }
 .first-screen {
     background-image: url(bannerV2.jpg);
     background-repeat: no-repeat;
     background-size: 150%;
     min-height: 480px;
-    background-position: center;
     overflow: auto;
-    
+    padding-top: 30px;
 }
-h1 {
-    font-size: 240%;
-    margin: 0;
+.nav .left {
+    width: 30%;
 }
-.title {
-    margin-bottom: 20px;
+ .nav .right{
+    width: 70%;
 }
-.center  {
+.center {
     text-align: center;
 }
-.first-screen .center {
-    margin-top: 70px;
-
-}
-.nav {
-    margin-top:10px;
-}
-.nav .col.left {
-    width:30%;
-}
-.nav .col.right {
-    width:  70%;
-    text-align: right;
-}
-
-.nav a {
+.logo {
     display: inline-block;
-    padding: 2px 10px;
+    background: rgba(0,0,0,.3);
+    background-image: url(spriteV2_new.png);
+    width:120px;
+    height: 60px;
+    background-position: 0px 0 px;
+} 
+.logo,
+.location {
+    vertical-align: middle;
+    display: inline-block;
+
+}
+.name {
+    color: #eee;
+}
+.first-screen .right a {
+    color: #eee;
+    padding: 5px;
     font-weight: bold;
 }
-.nav .link-group a {
-   
-}
-.nav .auth a {
-    font-size: 70%;
+.first-screen .auth a{
     font-weight: normal;
+    
 }
-.logo  {
-    width: 200px;
-    height: 200px;
-    background-image: url(C:\biao-class\prictice\001-webstructure\spriteV2_new.png);
-    background-repeat: no-repeat;
-    background-position: 0px -372px;
-    background-size: auto;
+.first-screen .link-group{
+    padding-top: 15px;
+}
+
+h1 {
+    color: #eee;
+    font-size: 240%;
+    margin-top: 90px;
+    margin-bottom: 10px;
+}
+.sun {
+    color: #eee;
+}
+.search-area a{
+    color: #eee;
+}
+.search-button,
+.search-input {
+    padding: 12px 15px;
+    display: inline-block;
+    border: 0;
+
+}
+.search-input {
+    width:400px;
+}
+.search-button {
+   background-color: green;
+}
+.search-area {
+    max-width: 550px;
+    margin: 0 auto;
+    text-align: left;
+    
+}
+.link {
+    margin-top: 40px;
+    margin-bottom: 10px;
+    font-size: 18px;;
+}
+.others {
+    color: #eee;
+    margin-top:70px;
+}
+.location {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0,0,0,.3);
+    display: inline-block;
+    background-image: url(spriteV2_new.png);
+}
+.name {
+    margin-left:20px;
+    margin-top: 20px;
 }
