@@ -1,5 +1,8 @@
 a {
-    color: black;
+    color: #eee;
+}
+.first-screen .nav {
+    padding: 20px;
 }
 .first-screen .nav left {
     width: 30%;
@@ -10,10 +13,262 @@ a {
     width: 70%;
 }
 .first-screen {
-    background-image: url(bannerV2.jpg);
+    background-image: url(../img/bannerV2.jpg);
+    min-height: 480px;
+    
+    
 }
 .first-screen .logo {
     width: 150px;
     height: 60px;
     background-color: rgba(0,0,0,.2);
+    background-image: url(../img/spriteV2_new.png);
+    background-position: 0px -370px;
+}
+.first-screen .location {
+    background:rgba(0,0,0,.2);
+    border-radius: 17px;
+
+}
+.first-screen .logo,
+.first-screen .location{
+    vertical-align: middle;
+    display: inline-block;
+
+}
+.first-screen .location-icon {
+    width: 16px;
+    height: 30px;
+    /* background: rgba(0,0,0,.2); */
+    color: #eee;
+    background-position: -183px -12px;
+    background-image: url(../img/spriteV2_new.png);
+    
+}
+.first-screen .name,
+.first-screen .location-icon {
+    display: inline-block;
+    vertical-align: middle;
+
+}
+.first-screen .name {
+   color: #eee;
+   
+}
+.first-screen .right {
+    font-weight: bold;
+    margin-top: 10px;
+
+}
+.first-screen .auth {
+    font-weight: lighter;
+    margin-bottom: 8px;
+}
+.first-screen .fast-link a {
+    padding-left: 5px;
+}
+.first-screen .center {
+    color: #eee;
+    text-align: center;
+    margin-top: 50px;
+    
+}
+.first-screen .center .one {
+    font-size: 60px;
+}
+.first-screen .center .sub {
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+.search-area .search-bar {
+    
+}
+.search-bar .search-input,
+.search-bar .search-button{
+    padding: 7px 15px;
+    border: 0;
+}
+.search-area .search-input {
+    width: 400px;
+}
+.search-button {
+    background-color: #00ae66;
+    color: #eee;
+
+}
+.search {
+    font-size: 15px;
+    margin-bottom: 10px;
+   
+}
+/* first-scren 样式写完*/
+
+.first-screen .state {
+    color: #eee;
+    padding-top: 90px;
+}
+.fast-track .table {
+    display: inline-block;
+}
+.fast-track .card-group {
+    width: 25%;
+    text-align: center;
+    margin: 50px 0;
+    
+}
+.fast-track .text .title {
+    color: black;
+    font-size: 20px;
+}
+/* fast-track 样式写完*/
+.app {
+    background-image: url(../img/lianjia1.jpg);
+    min-height: 480px;
+    background-size: 150%;
+    margin: 50px 0;
+    background-repeat: no-repeat;
+}
+.app .text {
+    width: 40%;
+}
+.app .first {
+    padding-top: 30px;
+    font-size: 40px;
+    
+}
+.app .second {
+    font-size: 60px;
+    font-weight: bold;
+}
+.app .three {
+    padding: 15px 0;
+}
+.app .four {
+    width: 40px;
+    height: 80px;
+    display: inline-block;
+}
+.app .text .thumb {
+    width: 40%;
+}
+/*app样式写完*/
+.promote .title {
+    font-size: 25px;
+}
+.promote .text .left,
+.promote .text .right {
+    width:50%;
+}
+.promote .title .one {
+    font-weight: bolder;
+}
+.promote .text .desc {
+    color: rgba(0,0,0,.4);
+    padding-bottom: 10px;
+}
+.promote .card-group .thumb {
+    position: relative;
+    margin-bottom: 13px;
+    
+    
+}
+.promote .card-group .price {
+position: absolute;
+top:170px;
+width: 40px;
+height: 20px;
+background: rgba(0,0,0,.6);
+color: #eee;
+}
+.promote .card-group .location {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.promote .card-group .location,
+.promote .card-group .area {
+    text-align: center;
+}
+.promote .card-group {
+   
+   margin-bottom: 20px;
+   
+    
+}
+.promote .card-group .card {
+   padding:0 5px;
+   border: 1px solid rgba(0,0,0,.1);
+
+}
+/*promote 样式结束*/
+
+.footer {
+    height: 600px;
+    width: auto;
+    margin-top: 50px;
+    background:rgba(0,0,0,.9);
+    color: #eee;
+    
+
+}
+.footer .search-area {
+    background: #00ae66;
+    padding: 30px 0;
+    color: #eee;
+    
+}
+
+.footer .search-area .left {
+    padding-left: 20px;
+}
+
+
+.footer .search-area .left,
+.footer .search-area .right{
+    width: 50%;
+}
+.footer .search-area .left .one{
+    font-size: 60px;
+    font-weight: bold;
+    
+}
+.footer .search-area .left .two{
+    font-size:  60px;
+}
+.footer .search-area .right {
+    text-align: left;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.5;
+}
+ 
+.footer .search-area .right .search-bar {
+    padding: 10px 15px;
+    width: 500px;
+    margin-top: 20px;
+}
+
+
+.footer .message {
+    margin: 30px 0;
+    padding-left: 20px;
+
+}
+.footer .others-link .hot  a{
+    padding: 10px 15px;
+    background: gray;
+
+}
+.footer .others-link .hot{
+    margin: 20px 0;
+}
+.footer .others {
+  margin-bottom: 50px;
+  padding: 20px;
+   
+}
+.footer .others-link {
+    padding-left: 20px;
+}
+.footer .metainformation{
+    padding-left: 20px;
 }
