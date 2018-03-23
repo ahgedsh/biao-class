@@ -1,0 +1,19 @@
+a {
+    color: black;
+}
+.first-screen .nav left {
+    width: 30%;
+
+}
+
+.first-screen .nav .right {
+    width: 70%;
+}
+.first-screen {
+    background-image: url(bannerV2.jpg);
+}
+.first-screen .logo {
+    width: 150px;
+    height: 60px;
+    background-color: rgba(0,0,0,.2);
+}

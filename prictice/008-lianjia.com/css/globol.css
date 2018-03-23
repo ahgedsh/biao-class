@@ -1,0 +1,28 @@
+* {
+    -webkit-box-sizing: border-box;
+}
+body {
+    margin: 0;
+}
+ .row {
+     font-size: 0;
+     display: block;
+ }
+ .col {
+     font-size: 15px;
+     display: inline-block;
+     vertical-align: top;
+ }
+ .container {
+     max-width: 1200px;
+     margin: 0 auto;
+ }
+ a {
+     text-decoration: none;
+ }
+ .col.right {
+     text-align: right;
+ } 
+ .img {
+     width: 100%;
+ }
