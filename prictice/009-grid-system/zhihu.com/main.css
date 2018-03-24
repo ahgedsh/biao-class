@@ -1,0 +1,154 @@
+.nav,
+.question-area,
+.subject-area,
+.footer .live,
+.footer .others {
+    background: #fff;
+    border: 1px solid rgba(0,0,0,.2);
+}
+
+
+.nav {
+   padding: 10px 0;
+    border-top:0;
+}
+.nav .right,
+.main .right{
+
+text-align: right;
+}
+
+.nav a{
+    color: rgba(0,0,0,.4);
+    padding-right:28px;
+}
+.nav .logo {
+    font-size: 30px;
+    padding-right: 20px;
+    color:#0084ff;
+}
+.nav .first {
+    color: rgba(0,0,0,.9);
+}
+.search-input,
+.search-button {
+    padding: 6px 6px;
+}
+.search-input {
+    width: 400px;
+}
+.search-button {
+    background-color: #0084ff;
+    color: #fff;
+    border-color: #0084ff;
+    margin-left: 10px;
+}
+.nav .right {
+    padding-top: 10px;
+    font-weight: bold;
+}
+.question-area {
+    padding: 18px 0;
+   
+}
+.question-area .left a {
+    color: black;
+    padding: 0 40px;
+    font-weight: bold;
+}
+.question-area .right a {
+    color: rgba(0,0,0,.7);
+    padding-right: 10px;
+}
+.main,
+.subject-area   {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+.subject-area .come {
+    padding: 20px 0px;
+    color: rgba(0,0,0,.7);
+}
+.subject-area .name {
+    display: inline-block;
+    margin-bottom: 15px;
+    
+}
+.subject-area .name .logo {
+    padding-right: 5px;
+}
+.subject-area .name .people {
+    margin-top: 3px;
+
+}
+
+.subject-area .title {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 15px ;
+}
+.subject-area .subject .one {
+    color: #0084ff;
+}
+.subject-area .comment {
+    margin: 15px 0;
+
+}
+.subject-area .comment button{
+    background: rgba(0,132,255,.1);
+    color: #0084ff;
+    padding: 5px 10px;
+}
+
+.subject-area .comment button:hover {
+    background: #0084ff;
+    color: #fff;
+}
+.subject-area .comment .three {
+    margin-left: 20px;
+    margin-top: 6px;
+   
+}
+.subject-area .comment .three a{
+    color: rgba(0,0,0,.7);
+    padding: 0 20px;
+}
+.footer .live  {
+   
+    padding: 40px;
+    
+    text-align: left;
+   
+    
+   
+} 
+.footer .live,
+.footer .others,
+.footer .metainformtion{
+    margin-left: 10px;
+    margin-top: 10px;
+    color: rgba(0,0,0,.7);
+
+}
+.footer .live button{
+    background: #fff;
+    border: 0;
+    padding: 30px;
+}
+.footer .others{
+    display: block;
+    
+}
+.footer .others div {
+    padding: 10px 0;
+    padding-left: 30px;
+}
+.footer .metainformtion {
+    color:rgba(0,0,0,.7);
+}
+
+.footer .metainformtion div {
+    padding-bottom: 10px;
+}
+    
+ 
