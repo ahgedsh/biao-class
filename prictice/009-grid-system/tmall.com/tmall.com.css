@@ -1,0 +1,126 @@
+.nav.global {
+    background: rgba(0,0,0,.1);
+    padding: 10px 20px;
+    margin-bottom: 40px;
+}
+
+.nav.global a{
+    color: rgba(0,0,0,0.4);
+    font-weight: 500;
+    padding: 0 10px;
+}
+
+
+/*导航样式结束*/
+.first-screen .search,
+.first-screen .fast-link {
+    margin-left: 80px;
+}
+
+.first-screen .search-input,
+.first-screen .search-button {
+    border: 2px solid #ff0036;
+    padding: 10px 40px;
+    margin-bottom: 10px; 
+    
+    
+}
+
+.first-screen .search-input {
+    width: 500px;
+}
+
+.first-screen .search-button {
+    background: #ff0036;
+    color: #fff;
+    font-weight: 800;
+}
+.first-screen .fast-link button{
+    background: #fff;
+    border-left: 0;
+    border-top: 0;
+    border-bottom: 0;
+    padding: 3px 8px;
+    border-color: rgba(0,0,0,.3);
+    font-size: 14px;
+    
+}
+
+.first-screen .fast-link .one,
+.first-screen .fast-link .two,
+.first-screen .fast-link .three,
+.first-screen .fast-link .four {
+    color: #ff0036;
+}
+
+.first-screen .fast-link button:last-child{
+    border-right: 0;
+}
+
+
+/*首屏上部分*/
+
+
+.mian-promote .picture1,
+.mian-promote .picture3 {
+    width: 80px;
+    height: 55px;
+}
+.mian-promote .nav-cat a {
+    color: rgba(0,0,0,0.7);
+    font-size: 15px;
+    padding-right: 8px;
+    font-weight: 600;
+}
+.mian-promote .nav-cat {
+    margin-top: 30px;
+    margin-left: 10px;
+    margin-bottom: -11px;
+    vertical-align: middle;
+}
+.mian-promote .nav-cat .title {
+    padding: 8px;
+    margin-left: 10px; 
+    text-align: center;
+}
+.mian-promote .cat {
+    display: block;
+    padding: 0 20px;
+    background-image: url(tmall14.jpg);
+    margin-top: -20px; 
+    margin-bottom: 50px;
+}
+
+.mian-promote .cat div {
+    padding: 10px;
+    color: #fff;
+}
+.mian-promote .cat .one {
+    width: 20%;
+    background: rgba(0,0,0,0.5);
+    font-size: 17px;
+    text-align: center;
+    
+}
+
+
+.mian-promote .nav-cat .title{
+    background:#ff0036;
+    
+  
+    
+}
+.mian-promote .nav-cat .title a{
+    font-size: 17px;
+    font-weight: 600;
+}
+/* main-promote 样式完成 */
+
+.barnd-buttom img {
+    width: 116.5px;
+    height: 116.5px;
+    padding: 15px;
+    background: black;
+}
+
+=
