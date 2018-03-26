@@ -134,6 +134,7 @@ a {
 .app .first {
     padding-top: 30px;
     font-size: 40px;
+    margin-top: 50px;
     
 }
 .app .second {
@@ -142,15 +143,31 @@ a {
 }
 .app .three {
     padding: 15px 0;
+    font-size: 16px;
 }
-.app .four {
-    width: 40px;
-    height: 80px;
-    display: inline-block;
+.app button {
+    display: block;
+    width: 100%;
+    padding: 10px 8px;
+    color: #eee;
+    margin: 20px;
+    background: #00ae66;
+    border: 0;
+    font-size: 15px;
 }
-.app .text .thumb {
-    width: 40%;
+
+
+
+
+.app .four .thumb {
+    width: 100px;
+    height: 100px;
+    
+    margin-left: 30px;
+    margin-top: 20px;
+    
 }
+
 /*app样式写完*/
 .promote .title {
     font-size: 25px;
@@ -195,80 +212,84 @@ color: #eee;
     
 }
 .promote .card-group .card {
-   padding:0 5px;
-   border: 1px solid rgba(0,0,0,.1);
+   padding: 10px;
+   margin-right: 30px;
+   width:260px;
+   height: 260px;
+   box-shadow: 0px 1px 1px #888888;
 
 }
 /*promote 样式结束*/
 
-.footer {
-    height: 600px;
-    width: auto;
-    margin-top: 50px;
-    background:rgba(0,0,0,.9);
-    color: #eee;
-    
-
-}
 .footer .search-area {
     background: #00ae66;
-    padding: 30px 0;
-    color: #eee;
+    padding: 50px 0;
+    color: #fff;
     
+}
+
+.footer .search-area .right {
+    font-size: 17px;
+    text-align: left;
+    line-height: 1.5;
+}
+
+.footer .search-area .right input {
+    width: 600px;
+    padding: 12px;
+    margin-top: 15px;
 }
 
 .footer .search-area .left {
-    padding-left: 20px;
+    font-size: 50px;
 }
-
-
-.footer .search-area .left,
-.footer .search-area .right{
-    width: 50%;
-}
-.footer .search-area .left .one{
-    font-size: 60px;
+.footer .search-area .left .one {
     font-weight: bold;
+    margin-bottom: 15px;
+
+}
+.footer .search-area .left .two {
+    font-weight: lighter;
     
 }
-.footer .search-area .left .two{
-    font-size:  60px;
+
+.footer .message,
+.footer .hot-area,
+.footer .metainformation
+{
+    background:#222;
+    color: #666;
 }
-.footer .search-area .right {
-    text-align: left;
-    font-size: 18px;
-    font-weight: bold;
-    line-height: 1.5;
+.footer .message  {
+   padding: 30px; 
+   border-bottom: 1px solid gray;
 }
- 
-.footer .search-area .right .search-bar {
-    padding: 10px 15px;
-    width: 500px;
-    margin-top: 20px;
+.footer .message .left a {
+    font-size: 17px;
+}
+.footer .message .right {
+    color: #7dcfa0;
+    font-size: 17px;
+}
+.footer .hot-area {
+    padding: 20px 0;
 }
 
+.footer .hot-area .one button {
+    padding: 9px 5px;
+    background: rgba(0,0,0,.1);
+    border: 0;
+    color: #eee;
+    margin-bottom: 20px;
+}
 
-.footer .message {
-    margin: 30px 0;
-    padding-left: 20px;
+.footer .hot-area .two {
+    margin-bottom: 50px;
+    
+}
 
-}
-.footer .others-link .hot  a{
-    padding: 10px 15px;
-    background: gray;
+.footer .hot-area .two div {
+    font-size: 15px;
+    line-height: 1.4;
 
-}
-.footer .others-link .hot{
-    margin: 20px 0;
-}
-.footer .others {
-  margin-bottom: 50px;
-  padding: 20px;
-   
-}
-.footer .others-link {
-    padding-left: 20px;
-}
-.footer .metainformation{
-    padding-left: 20px;
 }
