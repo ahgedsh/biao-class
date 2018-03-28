@@ -1,0 +1,133 @@
+ body{
+  background: #eee;
+}
+
+a {
+    color: rgba(0,0,0,.5);
+}
+.nav {
+    background: #fff;
+    overflow: hidden;
+    padding: 15px 0;
+    margin-bottom: 10px;
+   
+
+}
+.nav .logo {
+    font-size: 1.6rem;
+    color: #0084ff;
+
+}
+.nav a{
+    padding-right: 20px;
+}
+.nav .search-input,
+.nav .search-button {
+    padding: 5px;
+
+}
+
+.nav .search-input {
+    width: 300px;
+    
+}
+
+.nav .search-button {
+    margin-left: 10px;
+    background-color: #0084ff;
+    border-color:#0084ff ;
+}
+.nav .fr {
+    text-align: right;
+}
+
+/*nav 样式结束*/
+
+.main .question {
+    background: #fff;
+    padding: 15px;
+    margin-bottom: 10px;
+}
+.main .question a {
+    padding-left: 20px;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+.main .question .fr  {
+    text-align: right;
+  
+}
+.main .question .fr a{
+    font-weight: lighter;
+    font-size: 1.1rem;
+}
+
+.main .content-area {
+    background: #fff;
+    padding-left: 20px;
+    margin-bottom: 10px;
+
+}
+.main .content-area .hot {
+    padding: 10px 0;
+    color: rgba(0,0,0,.7);
+}
+
+.main .content-area .come {
+    padding-bottom: 10px;
+    color: rgba(0,0,0,.8);
+}
+.main .content-area .title {
+    font-size: 1.4rem;
+    color: black;
+    padding-bottom: 10px;
+    font-weight: bold;
+}
+.main .content-area .content {
+    padding-bottom: 10px;
+}
+
+.main .content-area .content .one {
+    color:#0084ff;
+}
+
+.main .content-area .comment  button{
+    background: rgba(0,132,255,.1);
+    color: #0084ff;
+    padding: 5px 14px;
+}
+
+.main .content-area .comment a{
+    padding-left: 35px;
+}
+/* main 样式完成*/
+
+.footer .service,
+
+.footer .metainformation {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.footer .others,
+.footer .service {
+    background: #fff; 
+    margin-left: 10px;
+    
+
+}
+.footer .others button {
+    border: 0;
+    padding: 40px;
+    background: #fff;
+}
+.footer .service a{
+    display: block;
+    padding: 12px;
+}
+.footer .metainformation a {
+   display: block;
+}
+.footer .metainformation {
+    line-height: 1.5;
+}
