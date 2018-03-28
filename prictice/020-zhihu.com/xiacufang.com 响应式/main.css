@@ -1,0 +1,109 @@
+.nav .search-input,
+.nav .search-button,
+.nav .register {
+    margin-top: 15px;
+    padding: 10px;
+   
+}
+.nav .search-button {
+    background: #dd3915;
+    color: #fff;
+    border-color:#dd3915;
+    margin-right: 20px;
+}
+.nav .search-input{
+    margin-left: 40px;
+}
+.nav a{
+    color: #dd3915;
+}
+.nav {
+    padding-bottom: 20px;
+    border-bottom: 1px solid gray;
+    margin-bottom: 20px;
+    
+}
+/*nav 样式完成*/
+.main .page {
+    color: #dd3915;
+    margin: 30px 0;
+}
+.main .title {
+    font-size: 1.9rem;
+    color: black;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.main .comment {
+    margin: 30px 0;
+    font-size: 1.3rem;
+    color: #dd3915;
+    
+}
+.main .comment button{
+    
+    background: #dd3915;
+    margin-left:180px;
+    border-color: #dd3915;
+    padding: 12px 40px;
+    margin-top: -15px;
+
+}
+/* main 样式完成*/
+.auth-area {
+    margin: 30px 0;
+}
+.auth-area .auth {
+    margin: 30px 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.auth-area .practice .one,
+.auth-area .practice .two,
+.auth-area .practice .three,
+.auth-area .practice .four{
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.auth-area .ingredient {
+    margin: 30px 0;
+}
+
+.auth-area .ingredient .name,
+.auth-area .classify .title,
+.auth-area .card-group .title,
+.auth-area .method .title {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #c0ae7d;
+}
+
+td {
+    width: 300px;
+    height: 60px;
+    font-weight: bold;
+    
+}
+a {
+    color: black;
+}
+
+.auth-area .classify button {
+    background: #eee;
+    padding: 8px 15px;
+    border: 0;
+    margin-bottom: 70px;
+}
+
+.auth-area .card {
+    padding: 20px;
+    text-align: center;
+}
+
+.auth-area .card .text {
+    margin-top: 20px;
+}
+.auth-area .method .one .fr {
+    padding: 10px;
+}
