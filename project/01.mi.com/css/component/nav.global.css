@@ -1,0 +1,21 @@
+.nav.global {
+    background: rgba(0,0,0,0.8);
+    
+
+}
+
+.nav.global a {
+    color: #eee;
+    padding-right: 15px;
+
+}
+
+.nav.global .left {
+    margin-top: 15px;
+}
+
+.nav.global .buy {
+    background: gray;
+    padding: 15px;
+}
+
