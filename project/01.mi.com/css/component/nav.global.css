@@ -6,16 +6,16 @@
 
 .nav.global a {
     color: #eee;
-    padding-right: 15px;
-
+    padding: 15px;
 }
 
 .nav.global .left {
-    margin-top: 15px;
+   
 }
 
 .nav.global .buy {
+    border: 2px solid gray;
     background: gray;
-    padding: 15px;
+    
 }
 

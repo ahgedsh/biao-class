@@ -1,0 +1,66 @@
+.nav.page {
+    padding: 15px 0;
+
+}
+
+a {
+    color: rgba(0,0,0,.7);
+    font-size: 1.2rem;
+    font-weight: bold;
+    
+}
+.nav.page .link {
+    margin-left: -20px ;
+    
+}
+
+a {
+    margin-top: 20px;
+}
+
+.nav.page .logo .one {
+    background: #ff6700;
+    display: inline-block;
+    margin-right: 20px;
+    margin-top: 10px;
+}
+
+.nav.page .logo {
+   
+   
+}
+.col {
+    font-size: 15px;
+    vertical-align: top;
+    display: inline-block;
+}
+
+.search-area {
+    margin-top: 10px;
+}
+.nav.page  .search-input,
+.nav.page  .search-button {
+    padding: 10px;
+
+}
+
+.nav.page  .search-input {
+    width: 250px;
+    margin-left: 25px;
+}
+
+.nav.page  .search-button {
+    margin: -7px;
+   background: none;
+
+}
+@media (max-width:400px) {
+    .nav.page .link {
+        font-size: 1.8rem;
+        font-weight: normal;
+    }
+
+    .nav.page .logo {
+        display: none;
+    }
+}
