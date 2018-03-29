@@ -1,0 +1,57 @@
+.order.main  {
+    background: #eee;
+    padding-bottom: 80px;
+}
+.order.main .crumbs {
+    margin: 15px 0;
+}
+.order.main .order-area .operation {
+    padding-right: 10px;
+   
+}
+.order.main .order-area .operation .one {
+    background: #fff;
+    margin-top: -30px;
+}
+
+.order.main .order-area .operation .inquire {
+    color: #ff6700;
+}
+
+.order.main .order-area .operation .one h5 {
+  padding-top: 20px ;
+  padding-left: 20px;
+  font-size: 1.6rem;
+
+}
+
+.order.main .order-area .operation{
+    text-align: left;
+   
+}
+.order.main .order-area .operation a {
+    display: block;
+    line-height: 3.5;
+    color: #555;
+    padding-left: 20px;
+    
+}
+
+.order.main .flow {
+    padding:0 20px ;
+    background: #fff;
+}
+
+.order.main .flow h2 {
+    font-size: 2.4rem;
+    color: rgba(0,0,0,.5);
+    font-weight: bold;
+}
+
+.order.main .question span {
+    margin-top: 30px;
+    display: block;
+}
+.order.main .card {
+    margin-top: 40px;
+}
