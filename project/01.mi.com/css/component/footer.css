@@ -42,7 +42,7 @@
    color: #000;
 }
 
-a {
+.footer a {
     color: #000;
 }
 
@@ -53,6 +53,9 @@ a {
 
 .link-group {
     margin-right: -10px;
+}
+.footer .metainformation .others{
+    font-size: 1rem;
 }
 
 .metainformation {
@@ -82,4 +85,12 @@ a {
 .metainformation .others .one,
 .metainformation .others .two {
     color:rgba(0,0,0,.5);
+}
+
+@media(max-width:400px){
+    .footer .metainformation .logo,
+    .footer .metainformation .right {
+        display: none;
+    }
+
 }
