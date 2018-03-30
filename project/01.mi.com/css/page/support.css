@@ -1,0 +1,52 @@
+.support-area {
+    margin-bottom: 50px ;
+}
+
+.support-area .crumbs {
+    margin: 20px 0;
+}
+
+.support-area .support .shooping-guide .title {
+    font-size: 20px;
+    padding-left: 20px;
+    margin: 20px 0;
+}
+
+.support-area .support .shooping-guide .one {
+    color: #ff6700;
+}
+
+.support-area .support .shooping-guide a{
+    display: block;
+    color: rgba(0,0,0,0.5);
+    padding: 10px 20px;
+    font-size: 12px;
+
+}
+.support-area .shooping-time,
+.support-area .support .shooping-guide .guide {
+    background: #fff;
+
+}
+
+.support-area .support .shooping-guide .guide {
+    margin-right: 20px; 
+}
+
+.support-area .shooping-time {
+    padding-left: 50px;
+}
+
+.support-area .shooping-time h2 {
+    font-size: 29px;
+    color: rgba(0,0,0,0.5);
+    padding-top: 20px;
+}
+
+.support-area .shooping-time .two {
+    margin-top: 20px;
+}
+
+.support-area .shooping-time .three {
+    padding-bottom: 50px;
+}
