@@ -1,0 +1,20 @@
+.login.nav {
+    position: relative;
+    overflow: auto;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.login.nav .logo{
+    background-image: url(C:/biao-class/project/01.mi.com/img/login.jpg);
+    color: #ff6700;
+
+}
+
+.login.nav .logo,
+.login.body {
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+ 

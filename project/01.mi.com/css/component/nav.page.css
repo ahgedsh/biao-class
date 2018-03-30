@@ -1,10 +1,8 @@
 .nav.page {
     background:#fff;
-}
-.nav.page {
     padding: 15px 0;
-
 }
+
 
 .nav .page {
     color: rgba(0,0,0,.7);
@@ -33,7 +31,7 @@
 
 
 
-.search-area {
+.nav.page .search-area {
     margin-top: 10px;
   
     

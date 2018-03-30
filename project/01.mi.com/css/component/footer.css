@@ -10,7 +10,7 @@
     margin: 40px 0;
 }
 
-.link-group .title {
+.footer .link-group .title {
    font-weight: bold;
    margin-bottom: 20px;
    
@@ -41,7 +41,7 @@
     
 }
 
-.others-link  {
+.footer .others-link  {
    color: #000;
 }
 
@@ -49,23 +49,26 @@
     color: #000;
 }
 
-.others-link  a{
+.footer .others-link  a{
     display: block;
     line-height: 2;
 }
 
-.link-group {
-    margin-right: -10px;
+.footer .link-group {
+    margin-right: -8px;
+    display: inline-block;
 }
+
+
 .footer .metainformation .others{
     font-size: 1rem;
 }
 
-.metainformation {
+.footer .metainformation {
     margin-top: 50px;
 }
 
-.metainformation .left .logo {
+.footer .metainformation .left .logo {
     background: #ff6700;
     display: inline-block;
 }
@@ -76,17 +79,18 @@
     
 }
 
+
 .footer .last {
     width: 85px;
     height: 30px;
 }
 
-.metainformation .others {
+.footer .metainformation .others {
     line-height: 1.4;
 }
 
-.metainformation .others .one,
-.metainformation .others .two {
+.footer .metainformation .others .one,
+.footer .metainformation .others .two {
     color:rgba(0,0,0,.5);
 }
 

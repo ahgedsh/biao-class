@@ -7,6 +7,7 @@
 html {
     font-family: sans-serif;
     font-size: 13px;
+    background: #eee;
 }
 
 a {
@@ -14,9 +15,17 @@ a {
     display: inline-block;
 }
 
+hr {
+    display: block;
+    height: 0;
+    border: 0;
+    border-bottom:1px solid rgba(0,0,0,.1);
+}
+
 img {
     max-width: 100%;
-    display: block;
+    display: inline-block;
+    
 }
 
 .container {
@@ -24,9 +33,26 @@ img {
     margin-left: auto;
     margin-right: auto;
 }
+.tac {
+    text-align: center;
+}
 
-.right {
+.tal {
+    text-align: left;
+}
+
+.tar {
     text-align: right;
+}
+
+.col.right,
+[class^="col-"].right {
+    text-align: right;
+}
+
+.col.left,
+[class^="col-"].left {
+    text-align: left;
 }
 
 .row {
@@ -34,7 +60,21 @@ img {
     display: block;
 }
 
-[class^="col-"] {
+.col,
+.col-lg-1,
+.col-lg-2,
+.col-lg-3,
+.col-lg-4,
+.col-lg-5,
+.col-lg-6,
+.col-lg-7,
+.col-lg-8,
+.col-lg-9,
+.col-lg-10,
+.col-lg-11,
+.col-lg-12,
+.col-1g-13,
+.col-lg-14{
     display: inline-block;
     vertical-align: top;
     font-size: 1rem;
@@ -42,12 +82,12 @@ img {
     /*border:2px solid #ccc;*/
     /*min-height: 20px;*/
 }
-.col {
+.col-lg-13  {
     display: inline-block;
     vertical-align: top;
     font-size: 1rem;
-    
 }
+
 
 
 .col-lg-1 {
@@ -60,6 +100,7 @@ img {
 
 .col-lg-3 {
     width: 25%;
+    display: inline-block;
 }
 
 .col-lg-4 {
@@ -103,6 +144,7 @@ img {
 
 .col-1g-13 {
     width: 20%;
+    
 }
 
 @media (max-width: 400px) {
