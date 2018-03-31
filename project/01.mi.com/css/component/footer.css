@@ -95,9 +95,16 @@
 }
 
 @media(max-width:400px){
-    .footer .metainformation .logo,
+    .footer .metainformation .left .logo,
     .footer .metainformation .right {
         display: none;
+    }
+    .footer .help,
+    .footer .service {
+        text-align:center;
+    }
+    .footer  .phone{
+        
     }
 
 }
