@@ -5,7 +5,14 @@
     padding: 30px 30px;
     font-size: 1.4rem;
 }
-
+.footer .service div:after {
+    content: "|";
+    margin-left: 50px;
+   
+}
+ .footer .service div:last-child::after{
+     display: none;
+ }
 .footer .help {
     margin: 40px 0;
 }
