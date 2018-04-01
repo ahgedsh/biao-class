@@ -97,7 +97,11 @@
 }
 .fr {
     float: right;
+    text-align: right;
 }
 a {
     text-decoration: none;
+}
+img {
+    max-width: 100%;
 }

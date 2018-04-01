@@ -5,18 +5,26 @@
     padding: 10px;
    
 }
-.nav .search-button {
+.nav .search-button,
+.main .comment button,
+.others button{
     background: #dd3915;
-    color: #fff;
     border-color:#dd3915;
+    color: #fff;
+}
+
+
+
+.nav .search-button {
+   
+    
+   
     margin-right: 20px;
 }
 .nav .search-input{
     margin-left: 40px;
 }
-.nav a{
-    color: #dd3915;
-}
+
 .nav {
     padding-bottom: 20px;
     border-bottom: 1px solid gray;
@@ -25,7 +33,7 @@
 }
 /*nav 样式完成*/
 .main .page {
-    color: #dd3915;
+    
     margin: 30px 0;
 }
 .main .title {
@@ -37,14 +45,14 @@
 .main .comment {
     margin: 30px 0;
     font-size: 1.3rem;
-    color: #dd3915;
+   
     
 }
 .main .comment button{
     
-    background: #dd3915;
+    
     margin-left:180px;
-    border-color: #dd3915;
+   
     padding: 12px 40px;
     margin-top: -15px;
 
@@ -73,10 +81,18 @@
 .auth-area .ingredient .name,
 .auth-area .classify .title,
 .auth-area .card-group .title,
-.auth-area .method .title {
+.auth-area .method .title,
+.comment .title
+ {
     font-size: 1.5rem;
     margin-bottom: 20px;
     color: #c0ae7d;
+}
+
+.auth-area .classify,
+.auth-area .card-group .title
+ {
+    margin-left: 60px;
 }
 
 td {
@@ -106,4 +122,98 @@ a {
 }
 .auth-area .method .one .fr {
     padding: 10px;
+}
+
+.auth-area .hint  {
+    width: 680px;
+    height: 100px;
+    background: #eee;
+    margin: 30px;
+    
+}
+.auth-area .hint >* {
+    padding-left: 30px;
+}
+.auth-area .hint .title {
+    font-size: 15px;
+    font-weight: bold;
+   padding-top: 20px;
+   padding-bottom: 10px;
+}
+
+
+
+.others .title .text {
+    font-size: 1.3rem;
+    margin: 20px;
+    color: #c0ae7d;
+}
+.others .title .text  button {
+   
+    background: #fff;
+    border: none;
+    font-size: 12px;
+}
+.others .title .text  a,
+.others .card-group .desc .somebody,
+.comment .question .name,
+.main .comment,
+.main .page,
+.nav a {
+    color: #dd3915;
+}
+
+.others .title .text  a {
+    font-size: 1.1rem;
+}
+.others button {
+    width: 740px;
+    height: 50px;
+    margin: 30px 0;
+}
+.others .time {
+    padding-left: 30px;
+}
+.others .time >* {
+    margin:20px 0;
+    color: rgba(0,0,0,0.4);
+}
+.others .card-group {
+   
+    background: #eee;
+    margin: 10px;
+}
+    
+
+
+    
+.others .card-group .desc>* {
+    margin-top: 20px;
+    font-size: 0.8rem;
+   
+}
+.others .card-group .desc .somebody {
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.comment .question >*,
+.comment .praise {
+    margin-top: 20px;
+    
+}
+.footer {
+    margin-top: 50px;
+}
+.footer .panter button {
+    padding: 10px 20px;
+    color: #fff;
+    background:#84cf6d; 
+    border: #84cf6d;
+    margin-bottom: 30px;
+}
+.footer div,
+.footer div a  {
+    margin-bottom: 20px;
+    color: rgba(0,0,0,0.4);
 }
