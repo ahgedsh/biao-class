@@ -1,20 +1,76 @@
 .login.nav {
-    position: relative;
-    overflow: auto;
-    border-bottom: 1px solid rgba(0,0,0,0.1);
+  margin-bottom: -10px;
+  margin-left: 80px;
+    
 }
 
-.login.nav .logo{
-    background-image: url(C:/biao-class/project/01.mi.com/img/login.jpg);
-    color: #ff6700;
-
-}
-
-.login.nav .logo,
 .login.body {
-    background-repeat: no-repeat;
+    background-image: url(C:/biao-class/project/01.mi.com/img/login-body-bg.jpg);
     background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 30px;
+
 }
 
 
- 
+.login.body .login {
+  padding-top: 10px;
+   width: 400px;
+   margin-left: 800px;
+   text-align: center;
+   background: #fff;
+}
+.login.body .tab-head-group,
+.login.body .input-area {
+    margin: 20px 0;
+}
+
+.login.body .tab-head-group span {
+    font-size:22px;
+}
+.login.body .tab-head-group .head {
+    margin-right: 10px;
+   
+}
+.login.body .tab-head-group .head,
+.login.body .others .left{
+    color: #ff6700;
+}
+
+
+
+
+.login.body  .input-area input,
+.login.body .input-area button{
+    margin: 10px 0;
+    padding: 15px 60px;
+}
+
+.login.body .input-area button {
+    padding: 15px 120px;
+    background: #ff6700;
+    color: #fff;
+    border:1px solid #ff6700;
+    
+}
+
+.login.body .others {
+    padding: 20px 60px;
+}
+
+.login.body .others .left,
+.login.body .others .right,
+.login.body .social-login,
+.login.footer{
+    font-size: 14px;
+}
+
+.login.body .social-login {
+    margin-top: 90px;
+   
+}
+.login.footer {
+    margin-top: 100px;
+
+}
