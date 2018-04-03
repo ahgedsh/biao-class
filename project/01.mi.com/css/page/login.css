@@ -5,7 +5,7 @@
     background-image: url(C:/biao-class/project/01.mi.com/img/login-body-bg.jpg);
     background-size: cover;
 }
-.container {
+.login-main .container {
     text-align: right;
     width: 400px;
   

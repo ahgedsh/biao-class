@@ -1,4 +1,145 @@
 
+.order-nav{
+    margin-top: 30px;
+}
+.order-main {
+    margin-bottom: 30px;
+}
+.order-nav,
+.order-main{
+    background: #fff;
+}
+
+.order-nav {
+    border: 1px solid gray;
+    padding: 20px 85px;
+    border-right: none;
+  
+}
+
+.order-nav .left {
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.order-nav .right {
+    color: rgba(0,0,0,0.6);
+}
+
 
 
  
+ .order-main .thumb {
+     display: inline-block;
+ }
+
+
+ .order-main .text .one a,
+ .order-main .text .price,
+ .order-main .position .two a,
+ .order-main .position .three,
+ .order-main .service .know,
+ .order-main .select .first,
+ .order-main .color .second,
+ .order-main .others-service a,
+ .order-main .big-price,
+ .order-main .message button{
+     color: #ff6700;
+    
+     
+}
+.order-main .desc,
+.order-main .position,
+.order-main .color,
+.order-main .select,
+.order-main .sevent,
+.order-main .service,
+.order-main .message,
+.order-main .support {
+    margin-bottom: 30px;
+}
+.order-main .desc .one  {
+    color: rgba(0,0,0,0.4);
+    
+
+}
+
+.order-main .desc .price {
+    margin-top: 30px;
+    font-size: 27px;
+    margin-bottom: 10px;
+}
+
+.order-main .position {
+    border: 1px solid rgba(0,0,0,0.4);
+    background: #eee;
+    padding: 30px 0;
+    line-height: 2;
+    font-size: 15px;
+
+}
+
+
+.order-main .select .first-button,
+.order-main .color .second-button,
+.order-main .message button{
+    border: 1px solid #ff6700;
+    display: inline-block;
+    margin-bottom: 15px;
+  
+
+}
+.order-main .select button {
+    padding: 15px 50px;
+   
+}
+.order-main .color button {
+    padding: 15px 130px;
+   
+}
+.order-main .select button,
+.order-main .color button{
+    background: #fff;
+   border: 1px solid rgba(0,0,0,0.1);
+}
+.order-main .select button span{
+    padding-left: 40px;
+
+}
+
+.order-main .promise .left{
+    font-size: 1.3rem;
+
+}
+.order-main .others-service {
+    border: 1px solid rgba(0,0,0,0.1);
+    padding: 20px 0;
+    line-height: 1.4;
+    margin: 10px 0;
+
+}
+.order-main .others-service >* ,
+.order-main .sevent >*,
+.order-main .position >*{
+    padding-left: 30px;
+}
+
+.order-main .sevent {
+    padding: 30px 0;
+    background: #eee;
+
+}
+
+.order-main .sevent .big-price {
+    padding-top: 20px;
+    font-size: 24px;
+}
+
+.order-main .message button {
+    background: #fff;
+    padding: 20px 100px;
+
+}
+.order-main .support {
+    font-size: 15px;
+}
