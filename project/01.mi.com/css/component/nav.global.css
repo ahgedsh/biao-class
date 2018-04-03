@@ -1,21 +1,25 @@
-.nav.global {
-    background: rgba(0,0,0,0.8);
-    
-
+.nav-global {
+    background: rgba(0,0,0,.7);
 }
 
-.nav.global a {
-    color: #eee;
-    padding: 15px;
-}
-
-.nav.global .left {
+.nav-global a {
+    color:#eee;
+    padding: 10px 0 ;
    
+
+}
+.nav-global a:after {
+    content: "|";
+    color: rgba(0,0,0,.4);
+    margin-left: 15px;
+  
+}
+.nav-global .left a:last-child:after,
+.nav-global .right a:last-child::after{
+    display: none;
 }
 
-.nav.global .buy {
-    border: 2px solid gray;
+
+.nav-global .one {
     background: gray;
-    
 }
-

@@ -1,117 +1,121 @@
-.footer {
+.footer{
     background: #fff;
-}
-.footer .service div {
-    padding: 30px 30px;
-    font-size: 1.4rem;
-}
-.footer .service div:after {
-    content: "|";
-    margin-left: 50px;
    
 }
- .footer .service div:last-child::after{
-     display: none;
- }
-.footer .help {
-    margin: 40px 0;
-}
-
-.footer .link-group .title {
-   font-weight: bold;
-   margin-bottom: 20px;
-   
-}
-
-.footer .help  .phone {
-    border-left: 1px solid grey;
-    padding-left: 30px;
-    line-height: 1.6;
+.footer .service div  {
+  
+    font-weight: bold;
     text-align: center;
-}
-
-.footer .help .phone .one {
-    margin-top: -10px;
-    font-size: 1.7rem;
-}
-
-.footer .help .phone .one,
-.footer .help .phone button{
-    color: #ff6700;
-}
-
-.footer .help .phone button {
-    background:none;
-    padding: 10px 35px;
-    border-color: #ff6700;
-    margin-top: 10px;
-    
-}
-
-.footer .others-link  {
-   color: #000;
-}
-
-.footer a {
-    color: #000;
-}
-
-.footer .others-link  a{
-    display: block;
-    line-height: 2;
-}
-
-.footer .link-group {
-    margin-right: -8px;
-    display: inline-block;
-}
-
-
-.footer .metainformation .others{
-    font-size: 1rem;
-}
-
-.footer .metainformation {
-    margin-top: 50px;
-}
-
-.footer .metainformation .left .logo {
-    background: #ff6700;
-    display: inline-block;
-}
-
-.footer img {
+    font-size: 20px;
+    padding: 20px 0;
+    color: rgba(0,0,0,0.6);
    
+   
+}
+.footer .service div:after{
+    content: "|";
+    margin-left: 55px;
+
+}
+
+.footer .service div:last-child::after{
+    display: none;
+}
+
+.footer .help a {
+    display: block;
+    color: rgba(0,0,0,0.4);
+    padding: 5px 0;
+
+}
+
+.footer .help .help-group .text
+ {
+    margin: 20px 0;
+    font-size: 14px;
+}
+.footer .help .help-group {
+    margin-right: -10px;
+}
+
+.footer .help .phone-area {
+    margin-top:20px ;
+    border-left: 1px solid gray;
+    text-align: center;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    margin-left: -70px;
+ 
+}
+.footer .help .phone-area>*,
+.footer .help .phone-area button{
+  margin-left: 50px;
+}
+
+.footer .help .phone-area .phone,
+.footer .help .phone-area button {
+    color: #ff6700;
+
+}
+.footer .help .phone-area .phone {
+    font-size: 20px;
+    
+}
+.footer .help .phone-area button {
+    margin-top: 15px;
+    border:1px solid #ff6700;
+   background: #fff;
+   padding: 7px 15px;
+}
+
+.footer .meta .thumb   {
+background: #ff6700;
+display: inline-block;
+
+}
+
+.footer .meta >*  {
     display: inline-block;
+    line-height: 1.4;
     
 }
 
+.footer .meta .one,
+.footer .meta .two,
+.footer .meta .three{
+    padding-left: 60px;
+    color: rgba(0,0,0,0.4);
+ 
+    
+   
+}
+.footer .meta .one {
+    margin-top: -50px;
+}
+.footer .meta .one a { 
+    color: rgba(0,0,0,0.6);
 
-.footer .last {
-    width: 85px;
-    height: 30px;
+}
+.footer .meta .one a::after{
+    content: "|";
+    margin-left: 10px;
+}
+.footer .meta .one a:last-child::after{
+    display: none;
+}
+.footer .meta .picture {
+    padding:10px 80px ;
 }
 
-.footer .metainformation .others {
-    line-height: 1.4;
-}
-
-.footer .metainformation .others .one,
-.footer .metainformation .others .two {
-    color:rgba(0,0,0,.5);
-}
-
-@media(max-width:400px){
-    .footer .metainformation .left .logo,
-    .footer .metainformation .right {
+@media (max-width:400px){
+    .footer .thumb img,
+    .footer .picture img {
         display: none;
     }
-    .footer .help,
-    .footer .service {
-        text-align:center;
+    .footer .meta .one,
+    .footer .meta .two,
+    .footer .meta .three {
+        margin-top: 0;
+        padding-left: 0;
     }
-    .footer  .phone{
-        
-    }
-
 }

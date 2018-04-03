@@ -1,68 +1,34 @@
-.nav.page {
-    background:#fff;
-    padding: 15px 0;
+.nav-page {
+    background: #fff;
+    padding: 10px 0;
 }
 
-
-.nav .page {
-    color: rgba(0,0,0,.7);
-    
-}
-.nav.page .link {
-    margin-left: -40px ;
-    
-}
-
-.nav.page .link a {
-    font-size: 1.2rem;
-    font-weight: bold;
-    margin-top: 20px;
-    color: black;
-    
-}
-
-.nav.page .logo .one {
+.nav-page  .logo .thumb img{
     background: #ff6700;
-    display: inline-block;
-    margin-right: 20px;
-    margin-top: 10px;
-}
-
-
-
-
-.nav.page .search-area {
-    margin-top: 10px;
-  
     
 }
-.nav.page  .search-input,
-.nav.page  .search-button {
-    padding: 10px ;
+
+.nav-page .selece a{
+    color: rgba(0,0,0,0.8);
+    font-size: 16px;
+    margin-top: 15px;
+    margin-right: 10px;
+
+    
+}
+.nav-page .search-input,
+.nav-page .search-button {
+    padding: 10px;
+    margin-top: 7px;
 
 }
-
-.nav.page  .search-input {
-    width: 330px;
-    margin-left: 25px;
+.nav-page .search-button {
+    margin-left: -7px;
+    background: #fff;
+    border: 2px solid #e0e0e0;
+    
 }
 
-.nav.page  .search-button {
-    margin: -7px;
-   background: none;
-
-}
-@media (max-width:400px) {
-    .nav.page .link {
-        font-size: 1.8rem;
-        font-weight: normal;
-    }
-
-    .nav.page .logo {
-        display: none;
-    }
-    .nav.page .search-input
-     {
-        width:200px;
-    }
+.nav-page .search-input {
+    width: 250px;
 }
