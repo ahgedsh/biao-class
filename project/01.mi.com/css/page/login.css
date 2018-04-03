@@ -1,0 +1,97 @@
+.login-logo {
+    margin: 20px 50px;
+}
+.login-main {
+    background-image: url(C:/biao-class/project/01.mi.com/img/login-body-bg.jpg);
+    background-size: cover;
+}
+.container {
+    text-align: right;
+    width: 400px;
+  
+    margin-right: 100px;
+    background: #fff;
+}
+
+#login .tab-title a{
+    color: rgba(0,0,0,0.6);
+    font-size: 20px;
+    padding-right: 60px;
+    margin-top: 20px;
+   
+}
+#login .tab-title a::after {
+    content: "|";
+    margin-left: 55px;
+    color: rgba(0,0,0,0.6);
+}
+
+#login .tab-title a:last-child::after{
+    display: none;
+}
+#login .tab-title .first,
+.tab-others a {
+    color: #ff6700;
+}
+
+.tab-input  input,
+.tab-password input,
+.tab-button button{
+    padding: 10px 100px;
+    margin-right: 25px;
+
+}
+.tab-button,
+.tab-input,
+.tab-password{
+    margin-top: 25px;
+}
+.tab-button,
+.tab-input{
+   
+}
+
+.tab-button button {
+    width: 350px;
+    background: #ff6700;
+    color: #eee;
+    border: 1px solid #ff6700;
+}
+.tab-others {
+   margin-right: 30px;
+    margin-top: 10px;
+    margin-bottom: 130px;
+   
+
+}
+.tab-others >* {
+    font-size: 14px;
+}
+
+.tab-others a {
+  
+    margin-right: 70px;
+  
+}
+.tab-others .right {
+
+ padding-left: 30px;
+}
+.tab-footer {
+    margin-right: 150px;
+    
+}
+.tab-footer div {
+    margin-right: 10px;
+}
+.login-footer {
+    margin-top: 100px;
+}
+
+@media (max-width:400px){
+    .login-main,
+   {
+    background-image: none;
+    
+    }
+}
