@@ -1,53 +1,52 @@
-.support-area {
-    margin-bottom: 50px ;
+.support-crumbs {
+    font-size: 13px;
+    padding: 15px 0;
 }
+.support {
+    background: #eee;
 
-.support-area .crumbs {
-    margin: 20px 0;
-}
-
-.support-area .support .shooping-guide .title {
-    font-size: 20px;
+ 
    
-    padding: 20px 20px ;
+}
+.support-main .left .text ,
+.support-main .desc{
+    background: #fff;
+}
+.support-main .left .text {
+  width: 90%;
+  
+   
+} 
+.support-main .left .text a{
+    display: block;
+    
+    font-size: 13px;
+    
+}
+.support-main .left .text >*{
+    padding:  10px 35px;
+}
+.support-main .left h5{
+    font-size: 16px;
+  
+}
+.support-main .text {
+    margin-top: -25px;
+}
+.support-main .desc .one,
+.support-main .desc .two {
+    margin-top: 30px;
+}
+.support-main h1 {
+    font-size: 3rem;
     
 }
 
-.support-area .support .shooping-guide .one {
-    color: #ff6700;
-}
-
-.support-area .support .shooping-guide a{
-    display: block;
+.support-main .left .text a,
+.support-main h1 {
     color: rgba(0,0,0,0.5);
-    padding: 10px 20px;
-    font-size: 12px;
-
-}
-.support-area .shooping-time,
-.support-area .support .shooping-guide .guide {
-    background: #fff;
-
 }
 
-.support-area .support .shooping-guide .guide {
-    margin-right: 20px; 
-}
-
-.support-area .shooping-time {
-    padding-left: 50px;
-}
-
-.support-area .shooping-time h2 {
-    font-size: 29px;
-    color: rgba(0,0,0,0.5);
-    padding-top: 20px;
-}
-
-.support-area .shooping-time .two {
-    margin-top: 20px;
-}
-
-.support-area .shooping-time .three {
+.support-main {
     padding-bottom: 50px;
 }
