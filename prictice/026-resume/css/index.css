@@ -1,0 +1,32 @@
+.message .picture  {
+    max-width: 100px;
+    max-height: 230px;
+    padding-top: 20px;
+   
+}
+.message .picture .thumb {
+    border: 1px solid rgba(0, 0, 0, .3);
+}
+
+.job-intension {
+    font-size: 19px;
+    padding-bottom: 20px;
+}
+.technology,
+.education,
+.self-assessment{
+    padding-top: 30px;
+}
+
+.technology .star{
+    padding: 10px 0;
+
+}
+hr{
+    margin-bottom: 15px;
+}
+
+.education div,
+.self-assessment div {
+    padding: 10px 0;
+}
