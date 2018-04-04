@@ -20,18 +20,94 @@
 }
 .first-screen .fast-track .fast-link {
     background: #665e57;
-    
+    color:#eee;
+    font-size: 15px;
  
 }
 .first-screen .fast-track .fast-link >* {
     margin-right: -5px;
-    border: 1px solid red;
+   
     
    
 }
-.
+.first-screen .fast-link div {
+    padding: 20px 11px;
+}
 
+.first-screen .fast-track .card1,
+.first-screen .fast-track .card2,
+.first-screen .fast-track .card3{
+    padding:10px;
+    padding-top: 0;
+}
+
+.promote ,
+.recommend{
+    background: #eee;
+   
+  
+}
+.promote .title {
+   padding: 10px 0;
+}
+
+.promote .title .phone {
+    font-size: 23px;
+    font-weight: bold;
+}
+.promote .card-group .card{
+    text-align: center;
+    padding:0 10px ;
+    margin: 0 10px;
+    background: #fff;
+
+}
+
+.promote .leader ,
+.promote .card-group .card{
+    margin-top: 10px;
+}
+.promote .card-group .card .text {
+    font-size: 14px;
+    margin-top: 20px;
+}
+.promote .card-group .card .price ,
+.recommend .card .name{
+    margin-top: 10px;
+    color: #ff6700;
+    padding-bottom: 20px;
+
+}
+.promote .card-group .card .title {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.recommend .card-group {
+    padding: 50px 0;
+   
+}
 
 .recommend .card {
     text-align: center;
+    background: #fff;
+    padding: 10px ;
+    margin: 10px;
 }
+
+.recommend .card .title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.recommend .card .desc {
+    font-size: 11px;
+    color: rgba(0,0,0,.5);
+    padding: 20px 0;
+}
+.recommend .card .price,
+.recommend .button{
+    padding: 20px 0;
+
+}
+
