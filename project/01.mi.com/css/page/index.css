@@ -1,113 +1,168 @@
-.first-screen .main-link {
+.first-screen,
+.promote,
+.bjgcard,
+.recommend {
+    margin: 50px 0;
+   
+}
+
+.color {
+    background: #eee;
+}
+.first-screen .flink {
     background-image: url(C:/biao-class/project/01.mi.com/img/first-screen.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
     background-size: cover;
-    width:1200px;
-    min-height: 500px;
 }
-
-.first-screen .main-link a{
-    display: block;
-    color: #eee;
-    width: 20%;
-    background: rgba(0,0,0,0.8);
-    padding: 13px 30px;
-    font-size: 15px;
-}
-
-.first-screen .fast-track  {
+.first-screen >* {
     margin: 30px 0;
+}
+
+
+
+.first-screen .flink a{
+    display: block;
+    color: #fff;
+    width: 20%;
+    background: rgba(0,0,0,0.7);
+    font-size: 15px;
+    padding: 15px;
+    margin-left: 25px;
+}
+
+.first-screen .fast-track-area .fast-link{
+    background: #5f5750;
+   
     
 }
-.first-screen .fast-track .fast-link {
-    background: #665e57;
-    color:#eee;
-    font-size: 15px;
+
+.first-screen .fast-track-area .fast-link,
+.first-screen .fbye .card-group .card1 .cdown a{
+    color: #eee;
+}
+
+.first-screen .fast-track-area .fast-link .link div{
+    padding: 35px 13px;
+}
+
+
+.first-screen .fast-track-area .card {
+   padding-left: 10px;
+}
+.first-screen .fbye .title  {
+    margin: 20px 0;
+}
+
+.first-screen .fbye .title .name,
+.recommend .title,
+.promote .title
+{
+    font-size: 22px;
+    font-weight: bold;
  
 }
-.first-screen .fast-track .fast-link >* {
-    margin-right: -5px;
-   
-    
-   
-}
-.first-screen .fast-link div {
-    padding: 20px 11px;
+
+.first-screen .fbye .title button {
+   background: #fff;
+   padding: 5px 10px;
 }
 
-.first-screen .fast-track .card1,
-.first-screen .fast-track .card2,
-.first-screen .fast-track .card3{
-    padding:10px;
-    padding-top: 0;
-}
-
-.promote ,
-.recommend{
-    background: #eee;
-   
-  
-}
-.promote .title {
-   padding: 10px 0;
-}
-
-.promote .title .phone {
-    font-size: 23px;
-    font-weight: bold;
-}
-.promote .card-group .card{
-    text-align: center;
-    padding:0 10px ;
-    margin: 0 10px;
-    background: #fff;
-
-}
-
-.promote .leader ,
-.promote .card-group .card{
-    margin-top: 10px;
-}
-.promote .card-group .card .text {
-    font-size: 14px;
-    margin-top: 20px;
-}
-.promote .card-group .card .price ,
-.recommend .card .name{
-    margin-top: 10px;
-    color: #ff6700;
-    padding-bottom: 20px;
-
-}
-.promote .card-group .card .title {
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-.recommend .card-group {
+.first-screen .fbye .card-group .card1 {
+    background: #f1eded;
     padding: 50px 0;
+    border-top: 1px solid #e53935;
+
+}
+
+.first-screen .fbye .card-group .card1>* {
+    margin-top: 30px ;
+}
+
+.first-screen .fbye .card-group .card1 .time{
+    color: #e53935;
+    font-size: 25px;
+}
+
+.first-screen .fbye .card-group .card1 .others {
+  font-size: 15px;
+  color: rgba(0,0,0,0.7);
+}
+
+.first-screen .fbye .card-group .card1 .cdown a{
+    background: #605751;
+    width: 36px;
+    height: 36px;
+    padding-top: 8px;
+}
+
+.first-screen .fbye .card-group .card1 .cdown {
+    font-size: 20px;
+}
+
+.first-screen .fbye .card-group .card {
+    background: rgba(0,0,0,0.02);
+    max-width: 18%;
+    margin: 0 10px;
+    border-top: 1px solid #83c44e;
+    font-size: 13px;
+}
+
+.first-screen .fbye .card-group .card .thumb,
+.first-screen .fbye .card-group .card .price {
+    padding: 20px 0;
+}
+.first-screen .fbye .card-group .card .price,
+.promote .card-group .other-card .card .price{
+    color: #ff6700;
+    padding-top: 20px;
+}
+
+.first-screen .fbye .card-group .card .name {
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+.first-screen .fbye .card-group .card .desc{
+    color: rgba(0,0,0,0.5);
+}
+/*first-screen */
+
+.promote .card-group .other-card .card,
+.recommend .card-group .card {
+    background: #fff;
    
 }
 
-.recommend .card {
-    text-align: center;
-    background: #fff;
-    padding: 10px ;
-    margin: 10px;
+.promote .card-group .other-card .card,
+.promote .card-group  .leader .thumb
+{
+   
+    margin-top: 10px;
+    
+ 
+}
+.promote .card-group .other-card .card{
+    padding: 0 20px;
+    margin: 15px 10px;
 }
 
-.recommend .card .title {
-    font-size: 20px;
+.promote .card-group .other-card .card .text {
+    padding:20px 10px;
+}
+
+    
+.promote .card-group .other-card .card .text .title {
     font-weight: bold;
+    font-size: 15px;
 }
 
-.recommend .card .desc {
-    font-size: 11px;
-    color: rgba(0,0,0,.5);
-    padding: 20px 0;
+.promote .card-group .other-card .card .text .desc {
+    color: rgba(0,0,0,0.5);
+    margin: 10px 0;
 }
-.recommend .card .price,
-.recommend .button{
-    padding: 20px 0;
 
+.promote .title {
+    border: 1px solid red;
 }
+/* promote 完成*/
 

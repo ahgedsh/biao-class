@@ -1,31 +1,32 @@
 .login-page .logo {
-    margin: 30px 70px;
+    margin: 10px 70px;
 }
 
  .login-main{
     background-image: url(C:/biao-class/project/01.mi.com/img/login-body-bg.jpg);
-    max-width: auto;
+    
    
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
    
 }
 #login {
     max-width: 400px;
-    border: 1px solid black;
     margin-left: 800px;
     margin-top: 30px;
     text-align: center;
     background: #fff;
+    margin-bottom: -1px;
 }
-.login-page .container {
-    border: 1px solid red;
-  
-}
+.login-main .container {
+    border: 1px solid #f3dcb4;
+    margin-bottom: 150px;
+}  
 .login-main .tab-name .one::after {
     content: "|";
     padding: 40px;
-    color:rgba(0,0,0,0.5);
+    color:rgba(0,0,0,0.7);
 }
 .login-main .tab-name .one,
 .login-main .register .left {
@@ -33,4 +34,34 @@
 }
 .login-main .tab-name {
     font-size: 20px;
+    padding: 15px;
+   
+}
+
+.login-main input,
+.login-main button{
+    width: 80%;
+    margin: 12px 0;
+    padding: 15px 0;
+}
+
+.login-main button {
+    color: #eee;
+    background: #ff6700;
+    border: 0;
+}
+
+.login-main .register {
+    padding: 10px 40px;
+    margin-bottom: 100px;
+}
+
+@media (max-width:400px){
+    #login {
+        margin-left: 0;
+        border:1px solid rgba(0,0,0,0.3);
+    }
+    .login-page .logo {
+        display: none;
+    }
 }
