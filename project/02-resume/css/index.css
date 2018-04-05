@@ -1,0 +1,57 @@
+.message .picture  {
+    max-width: 110px;
+    max-height: 230px;
+    padding-top: 20px;
+   
+}
+h1,
+h2,
+h3,
+
+.person .age,
+.person .position,
+.person .phone,
+.person .email
+{
+    color: #6a6abf;
+   
+}
+.technology span {
+    margin-top: 18px;
+}
+
+
+.message .picture .thumb {
+    border: 1px solid rgba(0, 0, 0, .3);
+}
+
+.job-intension {
+    font-size: 19px;
+    margin-top: -25px;
+   
+}
+.project {
+    margin-top: 10px;
+}
+
+.job-intension span {
+    padding-top: 17px;
+}
+.technology,
+.education,
+.self-assessment{
+    padding-top: 30px;
+}
+
+.technology .star{
+    padding: 10px 0;
+
+}
+hr{
+    margin-bottom: 15px;
+}
+
+.education div,
+.self-assessment div {
+    padding: 10px 0;
+}
