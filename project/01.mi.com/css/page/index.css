@@ -56,7 +56,8 @@
 
 .first-screen .fbye .title .name,
 .recommend .title,
-.promote .title
+.promote .title .left
+
 {
     font-size: 22px;
     font-weight: bold;
@@ -161,8 +162,35 @@
     margin: 10px 0;
 }
 
-.promote .title {
-    border: 1px solid red;
-}
-/* promote 完成*/
+.promote .title .left,
+.promote .title .right {
+    margin-top:20px ;
 
+}
+
+.promote .title .right a{
+    color: rgba(0,0,0,0.7);
+    font-size: 15px;
+    padding:0 20px;
+    
+}
+.promote .title .right a:first-child {
+    color: #ff6700;
+
+}
+
+/* promote 完成*/
+.recommend .title  {
+    margin-bottom: 30px;
+}
+
+.recommend .card-group .card { 
+    border: 1px solid red;
+   
+    padding:0 10px;
+   
+    
+   
+    
+   
+}
