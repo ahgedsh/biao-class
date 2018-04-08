@@ -1,0 +1,15 @@
+.footer {
+    padding: 50px;
+    background: rgba(0,0,0,0.9);
+    color: #fff;
+  
+}
+
+.footer .contact i {
+   margin: 20px;
+}
+.footer .contact i:hover {
+    font-size: 40px;
+    margin: 5px;
+
+}

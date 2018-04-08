@@ -1,38 +1,32 @@
-.first-screen .nav {
-    
-    background: rgba(0,0,0,0.7);
-    color: #fff;
-    
-}
-.first-screen  .nav a{
-    padding: 10px 0;
-    margin: 0 150px;
-   
-}
-h1 {
-    font-size: 3rem;
-}
 
-
-.first-screen .nav  a{
-    color: #fff;
+.nav,
+.first-screen button,
+.footer{
+   background: rgba(0,0,0,0.9);
 }
 
 .first-screen .title {
     padding: 50px;
 }
+
+.first-screen   h1 {
+    font-size: 3rem;
+}
+
 .first-screen button {
-    background-color:rgba(0,0,0,0.7);
-   
     padding: 10px;
     border: rgba(0,0,0,0.7);
     margin: 20px;
 }
+
 .first-screen button a{
     color: #fff;
 }
-.first-screen button:hover {
-    background-color: black;
+
+.main .first img {
+    max-height: 450px;
+    padding-left: 100px;
+  
 }
 
 .main .second {
@@ -41,7 +35,7 @@ h1 {
 }
 
 .container {
-    border:2px solid rgba(0,0,0,0.7);
+    border:2px solid rgba(0,0,0,0.9);
 
 }
 
@@ -50,18 +44,13 @@ h1 {
     
     font-size: 25px;
 }
-.content .mypicture{
+.content .mypicture,
+.content .thank{
     padding: 63px;
 }
-.content .thank {
-    padding: 60px 0;
-    padding-right: 20px;
-    
-}
 
-.content .otherpicture  img{
-    max-height: 210px;
-}
+
+
 
 .introduce >* {
     padding: 50px 20px;
@@ -72,27 +61,34 @@ h1 {
    
 }
 
-.footer {
-    padding: 50px;
-    background-color: rgba(0,0,0,0.7);
-    color: #fff;
-  
-}
 
-.footer h4{
-    font-size: 23px;
-}
 body {
     font-family: Arial, Helvetica, sans-serif; 
    
 }
-
-.first-screen .nav a:hover{
-    background: black;
-
-    
+ .nav a:hover,
+.first-screen .title a:hover
+ {
+    color: rgb(246, 10, 10);
 }
 
+
+.first-screen .title  a:hover{
+    font-weight: bold;
+    color: rgb(246, 10, 10);
+    
+  
+}
+
+
+/* .first-screen button:hover {
+    background: #fff;
+    
+    
+} */
+
+
+                                                                                                                          
 @media(max-width:400px){
     .main  .second {
         padding: 10px;
@@ -101,7 +97,5 @@ body {
         width: 80%;
         padding-left: 20px;
     }
-    .first-screen .nav {
-      
-    }
+   
 }

@@ -1,0 +1,31 @@
+.contact div {
+    font-size: 60px;
+    
+}
+.contact .one {
+    margin-top: 70px;
+}
+
+.contact .two {
+    margin-bottom: 70px;
+}
+
+.something >*{
+    padding: 25px;
+    line-height: 2;
+    
+}
+.something .title {
+    padding: 15px;
+}
+
+.something .content {
+    font-size: 15px;
+    color: rgba(0,0,0,0.6);
+}
+.picture {
+    margin-top: 30px;
+}
+.pictur {
+    margin-top: 60px;
+}
