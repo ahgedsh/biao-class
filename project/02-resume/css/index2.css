@@ -1,0 +1,115 @@
+
+.nav {
+    position: relative;
+
+}
+.nav .card {
+    margin-left:-60px;
+    position:absolute;
+}
+.nav .card2 {
+    position: absolute;
+    margin-top: 120px;
+    margin-left:20px;
+
+}
+.nav .picture,
+.nav .text {
+    margin-top: 30px;
+}
+
+
+.nav .picture img {
+    margin-top: 20px;
+    
+}
+.nav .text .name{
+    font-size: 30px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+.nav .border {
+    width: 430px;
+    height: 2px;
+   
+  
+  
+}
+
+.nav .border,
+.border2{
+    background: black;
+}
+.nav .border,
+.border2{
+    border-radius: 50px;
+}
+
+.nav .border,
+.nav .time,
+.nav .email{
+    margin: 10px 0;
+}
+.nav .text {
+    padding-left: 20px;
+}
+.nav .time >*,
+.nav .email >*{
+    margin-right: 30px;
+}
+
+/* nav finsh*/
+
+.border2{
+    height: 7px;
+    margin-top: 30px ;
+}
+
+
+.project .title,
+.technology .title,
+.evaluate .title,
+.education .title{
+    padding: 5px ;
+    border: 2px solid black;
+    border-radius: 50px;
+    font-weight: bold;
+    margin-top: 50px;
+    margin-bottom: 20px;
+   
+
+}
+.project .title >*,
+.technology .title>*,
+.evaluate .title>*,
+.education .title>* {
+    margin-left: 15px;
+}
+
+
+.project .content,
+.technology .content,
+.evaluate .contnet {
+    margin: 15px 0;
+}
+
+.project .la,
+.technology .la {
+    font-size: 20px;
+    font-weight: bold;
+   
+  
+}
+.evaluate  {
+    margin-bottom: 70px;
+}
+
+
+
+.education .time {
+    font-weight: bold;
+}
+.education span {
+    margin-left:30px;
+}
