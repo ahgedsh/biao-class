@@ -30,7 +30,7 @@
     font-weight: bold;
 }
 .nav .border {
-    width: 430px;
+    max-width: 430px;
     height: 2px;
    
   
@@ -92,6 +92,7 @@
 .technology .content,
 .evaluate .contnet {
     margin: 15px 0;
+  
 }
 
 .project .la,
@@ -112,4 +113,20 @@
 }
 .education span {
     margin-left:30px;
+}
+@media(max-width:400px){
+    .nav .picture img {
+     
+    }
+    .nav .time span,
+    .nav .email span {
+        display: block;
+    }
+   
+    .nav .card,
+    .nav .card2{
+        display: none;
+       margin: 0;
+    }
+      
 }
