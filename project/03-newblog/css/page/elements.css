@@ -1,0 +1,67 @@
+.elements .name{
+    margin-top:150px;
+    color: #25a2c3;
+    font-size: 30px;
+    font-weight: bold;
+}
+.elements .toptext{
+    color: #bbb;
+    font-size: 19px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.elements .text-area .title{
+    color: #25a2c3;
+    font-size: 20px;
+    margin: 20px 0;
+    font-weight: bold;
+}
+.elements.container{
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.elements .text-area .desc{
+    margin-bottom: 30px;
+}
+
+.elements .card1 .title,
+.elements .card4 .title{
+    color: #25a2c3;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 20px 0;
+    
+}
+.elements .card2 .title,
+.elements .card3 .title{
+    color: #f6755e;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 20px 0;
+   
+}
+.elements .card1,
+.elements .card2,
+.elements .card3,
+.elements .card4 {
+    
+    padding-right: 30px;
+    margin-bottom: 30px;
+}
+.elements .card1 .text,
+.elements .card2 .text,
+.elements .card3 .text,
+.elements .card4 .text{
+    margin-right: 30px;
+}
+@media (max-width:400px){
+    .elements .card1,
+    .elements .card2,
+    .elements .card3, 
+    .elements .card4 {
+        text-align: center;
+    }
+}
