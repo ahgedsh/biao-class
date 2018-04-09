@@ -1,0 +1,42 @@
+.nav a{
+    color:#727a82;
+    margin-top: 25px;
+    font-size: 19px;
+}
+
+.nav {
+    min-height: 70px;
+    position: fixed;
+    top:0;
+    left: 0;
+    background: #fff;
+    width: 100%;
+}
+
+.nav .one a {
+   margin-left: 30px;
+}
+.nav img {
+    margin:0 100px;
+}
+
+
+
+.nav .two a{
+    margin-right: 30px;
+  
+}
+@media (max-width:400px){
+    .nav img {
+        display: none;
+    }
+    .nav .one,
+    .nav .two {
+        text-align: center;
+    }
+    .nav .one a,
+    .nav .two a{
+        margin: 15px 0;
+      
+    }
+}
