@@ -23,3 +23,9 @@
   border-left: none;
   border-right: none;
 }
+
+@media (max-width:400px){
+    .pictur {
+        margin: 0 50px;
+    }
+}

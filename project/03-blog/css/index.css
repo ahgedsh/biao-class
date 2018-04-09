@@ -89,13 +89,19 @@ body {
 
 
                                                                                                                           
-@media(max-width:400px){
+@media(max-width: 400px){
     .main  .second {
         padding: 10px;
     }
-    .main .first {
-        width: 80%;
-        padding-left: 20px;
+    .main .first img {
+        padding-left: 0;
     }
+    
+    .main .second,
+    .content .mypicture,
+    .content .thank{
+        text-align: center;
+    }
+
    
 }

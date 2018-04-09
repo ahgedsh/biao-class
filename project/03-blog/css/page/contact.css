@@ -29,3 +29,13 @@
 .pictur {
     margin-top: 60px;
 }
+
+@media (max-width:400px){
+    .pictur img{
+        margin:  0 50px;
+    }
+    .picture {
+       display: none;
+    }
+}
+
