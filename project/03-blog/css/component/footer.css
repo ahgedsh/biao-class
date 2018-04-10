@@ -6,10 +6,9 @@
 }
 
 .footer .contact i {
-   margin: 20px;
-}
+  margin: 30px;
+} 
 .footer .contact i:hover {
-    font-size: 40px;
-    margin: 5px;
+    transform: scale(1.2);
 
 }
