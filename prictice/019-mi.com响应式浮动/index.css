@@ -1,0 +1,70 @@
+.global {
+    background-image: url(img/pic05.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 700px;
+    background-attachment: fixed;
+    overflow: hidden;
+
+}
+.main .foo {
+    background: #fff;
+}
+.main .title{
+    color: #fff;
+    margin-top: 50px;
+}
+
+.main .desc{
+    color:rgba(255, 255, 255, 0.65) ;
+}
+.mian .thumb{
+    margin-top: 0;
+}
+.gldesc {
+    background: #eee;
+    
+}
+.gldesc >*{
+    padding: 70px;
+    color: rgba(0,0,0,0.5);
+}
+.gldesc .one{
+ padding-bottom: 0;
+}
+.picture-area{
+    background-color: #1e1f23;
+}
+.picture-area .text{
+    background: black;
+    color: #fff;
+  
+   
+   
+}
+.picture-area .text,
+.picture-area .picture{
+    margin:0 50px;
+}
+
+.picture-area {
+    padding-top: 50px;
+    padding-bottom: 540px;
+}
+
+.content .text{
+    background: #eee;
+    padding: 60px;
+   
+}
+.content .title{
+    padding-top: 40px;
+
+}
+.content .text .desc{
+    padding-bottom: 46px}
+.content .two .text{
+    background: #1e1f23;
+    color: #eee;
+}

@@ -1,0 +1,89 @@
+<script>
+// 
+// 
+// var a=[3,5,7,6,79,8,65,76,42,234,];
+// for (var i=0;i<a.length;i++ ){
+//   if (a[i]%2==1){
+//       console.log('奇数',a[i]);
+//   }
+// }
+
+// var a=[1,2,34,5,6,7,89,]
+// for (var i=0;i<a.length;i++){
+//     if(a[i]<=5)
+//     continue;
+//     console.log(a[i]);
+// }
+
+// var a=[1,2,3,4,5,6,7];
+// for (i=0;i<a.length;i++){
+//     console.log(a[i]);
+//     if(a[i]==3){
+//         console.log('坏人');
+//         break;
+//     }
+// }
+// console.log('放款失败');
+
+// var a=[1,2,3,4,5,6,7,];
+// for (i=0;i<a.length;i++){
+//     console.log(a[i]);
+//     if(a[i]==4){
+//         console.log('坏人');
+//         continue;
+       
+//     }
+    
+// }console.log('放款失败');
+
+// var a=[2,34,5,6,,54,65,32,656,]
+// for (var i=0;i<a.length;i++){
+//     console.log(a[i]);
+//     if(a[i]==5){
+
+        
+//         console.log('坏人');
+//         break;
+//     }
+// }console.log('放款失败');
+
+
+// var a=[
+//     [1,2,3],
+//     [2,3,4],
+//     [3,4,5],
+//     [4,5,6],
+// ];
+// for (var i=0;i<a.length;i++){
+//     for(var j=0;j<a[i].length;j++){
+//         console.log(a[i][j]);
+//     }
+// }
+
+var a = [
+    [ // 1排
+      [1, 11, 111], // 1班
+      [2, 22, 222], // 2班
+      [3, 33, 333], // 3班
+      [4, 44, 444], // 4班
+    ],
+    [ // 2排
+      [1, 11, 111], // 1班
+      [2, 22, 222], // 2班
+      [3, 33, 333], // 3班
+      [4, 44, 444], // 4班
+    ],
+  ];
+
+   for_i:  for (var i=0;i<a.length;i++){
+        for_j: for (var j=0;j<a[i].length;j++){
+            for_k: for(var k=0;k<a[i][j].length;k++){
+                if(a[i][j][k]==3){
+                    continue for_j;
+                }
+                console.log(a[i][j][k]);
+            }
+        }
+    }
+
+</script>

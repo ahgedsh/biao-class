@@ -88,6 +88,20 @@
 .col-lg-12 {
     width: 100%;
 }
+.tac {
+    text-align: center;
+}
+
+.tar{
+    text-align: right;
+}
+.container{
+    max-width: 1000px;
+    margin: 0 auto;
+}
+img {
+    width:100%;
+}
 
 @media (max-width:500px){
     .col-sm-12 {
