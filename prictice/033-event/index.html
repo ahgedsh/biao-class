@@ -1,0 +1,148 @@
+<!-- <a class="trigger" href="http://baidu.com">yo1</a>
+
+<input class="search" type="text">
+<button>yo</button>
+<script>
+  
+  ;(function(){
+      'use strict';
+//  var  trigger_list=document.querySelectorAll('.trigger');
+//  for(var i=0;i<trigger_list.length;i++){
+//      var trigger=trigger_list[i];
+//      trigger.addEventListener('click',function(event){
+//          event.preventDefault();
+//          console.log('op');
+
+//      })
+//  }
+ var trigger=document.querySelector('.trigger');
+ trigger.addEventListener('mouseleave',function(){
+     console.log('鼠标离开');
+ })
+ trigger .addEventListener('mouseenter',function(){
+     console.log('鼠标进入');
+ })
+ var search=document.querySelector('.search');
+ search.addEventListener('focus',function(){
+     console.log('已聚焦');
+ })
+ search.addEventListener('blur',function(){
+     console.log('已失焦点');
+ })
+ var button=document.querySelector('button');
+ button.addEventListener('click',function(){
+     console.log('已点击');
+ })
+
+  trigger.addEventListener('click',function(){
+        console.log('点击我啦');
+ })
+  })();
+</script> -->
+
+<style>
+  .container{
+    margin: 0 auto;
+    max-width: 1000px;
+    position: relative;
+  }
+  .row{
+    font-size: 0;
+    display:  block;
+  }
+  .col{
+    display: inline-block;
+    font-size: 1rem;
+    vertical-align: top;
+    width: 50%;
+  }
+  .col.right{
+    text-align: right;
+  }
+  .nav,
+  .others{
+    background: rgba(0,0,0,0.4);
+  
+  }
+  .others{
+    width: 100px;
+    position: absolute;
+    right: 0;
+    text-align: center;
+
+  }
+  .container{
+    position: relative;
+  }
+  a{
+    color: moccasin;
+    font-size: 20px;
+    padding: 10px;
+    text-decoration: none;
+  }
+  .others{
+    display: none;
+  }
+ .container{
+   
+   background-image: url(img/pic05.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 600px;
+    margin-bottom: 50px;
+ }
+
+</style>
+<div class="container">
+  <div class=" row nav">
+    <div class="col left">
+      <a href="#">item</a>
+      <a href="#">item</a>
+      <a href="#">item</a>
+      <a href="#">item</a>
+      <a href="#">item</a>
+    </div>
+    <div class="col right">
+      <a href="#">item</a>
+      <a href="#"class='menu'>MUNE</a>
+    </div>
+  </div>
+  <div class="others left">
+    <a href="#">item</a>
+    <a href="#">item</a>
+    <a href="#">item</a>
+    <a href="#">item</a>
+  </div>
+
+
+  
+</div>
+        
+<script>
+  var menu=document.querySelector('.menu')
+     ,others=document.querySelector('.others');
+
+  menu.addEventListener('click',function(e){
+    e.preventDefault();
+    menu.focus();
+    if(is_visible()){
+      hide();
+    }else{
+      show();
+    }
+
+  });
+  menu.addEventListener('blur',function(){
+    hide();
+  })
+  function show(){
+    others.style.display='inline-block';
+  }
+  function hide(){
+    others.style.display='none';
+  }
+  function is_visible(){
+    return others.style.display=='inline-block';
+  }
+</script>

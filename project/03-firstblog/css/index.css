@@ -1,0 +1,245 @@
+body{
+    background: #eee;
+}
+
+.nav{
+    background: rgba(0,0,0,0.75);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.nav .left a
+{
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: 300;
+    font-size: .55rem;
+}
+.others a{
+    font-size: 20px;
+    display: block;
+    color:#fff;
+    padding-top: 10px;
+    padding-right: 30px;
+}
+.others{
+   padding-top: 60px;
+    display: none;
+    position: absolute;
+    right: 0;
+    text-align: center;
+}
+
+.nav .left,
+.nav .right a{
+    font-style: 30px;
+    padding: 20px;
+    color: #eee;
+}
+
+.main-area{
+    background-image: url(../img/pic05.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 600px;
+    margin-bottom: 50px;
+
+}
+.main-area .trans{
+   background-color:  rgba(0,0,0,0.5);
+   min-height: inherit;
+}
+
+.main .text{
+    padding-top: 150px;
+}
+.main .title{
+    color: #eee;
+    font-size: 30px;
+}
+
+.main .desc{
+    color: rgba(255,255,255,0.3);
+    margin: 50px 0;
+    font-size: 20px;
+}
+.main button,
+.table button{
+    font-size: 20px;
+    padding: 12px 30px;
+    background: #5AA6ED;
+    border: 1px solid #5AA6ED;
+    color: #eee;
+}
+
+.picture-area{
+    padding: 50px;
+    
+}
+.picture-area .text{
+    padding: 50px;
+    background-color: #fff;
+}
+.picture-area .title{
+    color:rgba(0,0,0,0.75);
+}
+.picture-area .other,
+.picture-area .desc{
+    color: rgba(0,0,0,0.4);
+
+}
+.picture-area .desc p{
+    text-align: left;
+    font-size: 17px;
+    padding: 20px 0;
+}
+
+.first-area,
+.second-area{
+    background-image: url(../img/pic05.jpg);
+    min-height: 400px;
+    width: 100%;
+    bottom: 0px;
+    background-attachment: fixed;
+    background-color: rgba(0,0,0,0.4);
+
+}
+.first-area .trans,
+.second-area .trans
+{
+    background-color: rgba(0,0,0,0.1);
+   
+}
+.first-area .text{
+    padding:  50px;
+    color: rgba(255,255,255,0.4);
+}
+
+.first-area .title,
+.second-area .title,
+.first-area button{
+    color: #eee;
+}
+
+.first-area .title{
+    font-size: 20px;
+    margin: 30px;
+}
+.first-area .desc{
+    font-size: 15px;
+    padding: 0 30px;
+
+}
+.first-area button{
+  background: rgba(0,0,0,0.1);
+  border: 2px solid rgba(255,255,255,0.2);
+ padding: 5px 20px;
+ margin: 30px;
+
+}
+
+
+ .picture-two {
+    background: #eee;
+    margin-top: -70px;
+  
+}
+ .picture-two .one,
+ .picture-two .two{
+     background: #fff;
+     margin:0 80px;
+     margin:50px;
+ }
+ .picture-two .one{
+     margin-right: 40px;
+ }
+ .picture-two .two{
+     margin-left: 40px;
+ }
+ .picture-two .title{
+     font-size: 22px;
+     padding: 20px;
+
+     
+ }
+ .picture-two .desc,
+ .picture-two .others
+ {
+     padding: 30px;
+     color: rgba(0,0,0,0.4);
+    
+ }
+ .picture-two hr{
+     margin: 0 30px;
+ }
+ 
+  
+
+.second-area .text
+{
+  color: rgba(255,255,255,0.4);
+  padding: 30px 50px;
+  font-size: 20px;
+  padding-bottom: 150px;
+
+}
+.second-area .title{
+   
+    font-size: 30px;
+    padding-top: 50px;
+}
+
+ .table .input-area{
+    background: #fff;
+    margin: 0 50px;
+    margin-top: 50px;
+
+    
+}
+.table .input-area >*
+{
+    padding:  0 50px;
+}
+.table hr{
+    margin: 0 30px;
+}
+.table .input-area input{
+    background: #eee;
+    border:  1px solid rgba(0,0,0,0.2);
+}
+.table .input-area .first input,
+.table .input-area .depart input {
+ padding:10px ;
+
+ 
+  
+}
+.table .input-area .first input{
+    width: 90%;
+}
+.table .input-area .depart input{
+    width: 95%;
+}
+.table .input-area .message input{
+    padding-bottom: 200px;
+    padding-left: 10px;
+    padding-top: 10px;
+    width: 95%;
+
+}
+.table button{
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.footer{
+  padding-bottom: 100px;
+  font-size: 15px;
+
+}
+.footer a{
+    color: #5AA6ED;
+    text-decoration: underline;
+}

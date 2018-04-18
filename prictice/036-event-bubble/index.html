@@ -1,0 +1,33 @@
+<div class="box1">
+    <div class="box2">
+        <div class="box3"></div>
+    </div>
+</div>
+<style>
+    div {
+        background: rgba(161, 64, 64, 0.3);
+        padding: 50px;
+    }
+    
+   
+</style>
+<script>
+    var box1=document.querySelector('.box1');
+    var box2=document.querySelector('.box2');
+    var box3=document.querySelector('.box3');
+
+
+box1.addEventListener('click',function(e){
+  
+    console.log(e.target);
+});
+box2.addEventListener('click',function(e){
+    console.log(e.target);
+   
+});
+box3.addEventListener('click',function(e){
+    console.log(e.target);
+   
+});
+
+</script>

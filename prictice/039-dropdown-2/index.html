@@ -1,0 +1,107 @@
+<div class=" row nav">
+  <div class="container">
+    <div class="col left">
+      <a href="#">item</a>
+      <a href="#">item</a>
+      <a href="#">item</a>
+      <a href="#">item</a>
+      <a href="#">item</a>
+     
+    </div>
+    <div class="col right">
+      <a href="#">item</a>
+      <a href="#" class="menu">MENU</a>
+    </div>
+    <div class="content">
+    
+      <h3 class=" col ">登录</h3>
+      <input type="text">
+      <input type="text">
+      <button >登录</button>
+    </div>
+  </div>
+</div>
+<style>
+
+
+  .row{
+    font-size: 0;
+    display:block;
+  }
+  .col {
+    font-size: 1rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+  .col.right,
+  .col.left{
+    width: 50%;
+  }
+  .col.right{
+    text-align: right;
+  }
+
+  .container{
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+
+
+    .nav,
+    .content{
+      background: rgba(0,0,0,0.3);
+    }
+    .nav a{
+      margin: 20px;
+      text-decoration: none;
+      color: gainsboro;
+    }
+    
+
+    .content{
+      width: 20%;
+      position: absolute;
+      right: 0;
+      text-align: center;
+      display: none;
+      
+
+    }
+    .content input{
+      display: block;
+      width: 80%;
+    margin-left: 20px;
+    }
+    .content.show{
+      display: block;
+    }
+</style>
+<script>
+  var menu=document.querySelector('.menu');
+  var content=document.querySelector('.content');
+
+  menu.addEventListener('click',function(){
+    visible() ? hide() : show();
+
+  });
+
+  function show(){
+    content.classList.add('show');
+  }
+  function hide(){
+    content.classList.remove('show');
+  }
+  function visible(){
+    return content.classList.contains('show');
+  }
+ document.addEventListener('click',function(e){
+   var el=e.target;
+   var menus=el.closest('.content');
+   if(!menus && el !== menu)
+   hide();
+ })
+  
+
+</script>

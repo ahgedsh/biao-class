@@ -1,0 +1,13 @@
+<button class="yo">yo</button>
+<script>
+var yo=document.querySelector('.yo');
+yo.addEventListener('click',on_click);
+
+yo.addEventListener('click',function(){
+    console.log(2);
+});
+yo.removeEventListener('click',on_click);
+function on_click(){
+    console.log(1);
+}
+</script>

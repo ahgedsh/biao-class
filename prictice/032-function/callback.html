@@ -1,0 +1,199 @@
+<script>
+;(function(){
+    'use strict';
+    // function make_mell(attach,sbb,hgg){
+    //     console.log('买菜');
+        
+    //     console.log('洗菜');
+    //     if(sbb){
+    //         sbb();
+    //     }
+    //     if(attach)
+    //     attach();
+
+    //     console.log('切菜');
+    //     if(hgg){
+    //         hgg();
+    //     }
+    // }  make_mell(buy_pen,eat_row,ptef);
+
+    // function buy_pen(){
+    //     console.log('买笔');
+    // }
+    // function eat_row(){
+    //     console.log('吃肉');
+
+    // }
+    // function ptef(){
+    //     console.log('少放盐');
+    // }
+
+
+//     function buy(money,success,fail){
+//         if(money){
+//             console.log('下单成功');
+//             if(success)
+//             success();
+//         }else{
+//             console.log('下单失败');
+//             if(fail)
+//             fail();
+//         }
+
+
+//     }
+
+
+//     function game_order_success(){
+//         console.log('游戏单，无需发货');
+//     }
+//     function close_order_success(){
+//         console.log('服饰单');
+//         console.log('通知仓库发货中');
+//         console.log('已通知发货');
+//     }
+//     function fail_order(){
+//         console.log('钱呢');
+//     }
+
+//     buy(100 ,game_order_success, fail_order);
+//     buy(100,close_order_success,fail_order);
+//     buy(0,close_order_success,fail_order);
+
+
+
+
+// 
+// function sleep(before){
+    
+//     console.log('睡觉喽');
+//     if(before)
+//     before();
+// }
+// function teeth(){
+//     console.log('要先刷牙');
+//     }
+
+
+// sleep(teeth);
+
+
+
+// function buy(money,success,fail){
+//     if(money){
+//         console.log('下单成功');
+//         if(success)
+//         success();
+//     }else{
+//         console.log('下单失败');
+//         if(fail)
+//         fail();
+        
+//     }
+// }
+// function game_order_success(){
+//     console.log('游戏单，');
+//     console.log('无需发货');
+// }
+// function close_order_success(){
+//     console.log('服饰单');
+//     console.log('已通知仓库');
+//     console.log('发货中');
+// }
+// function fail_order(){
+//     console.log('钱没到位');
+// }
+// buy(100,close_order_success,fail_order);
+// buy(0,close_order_success,fail_order);
+// buy(19,game_order_success,fail_order);
+// buy(0,game_order_success,fail_order);
+
+
+
+
+
+// function eat(order,row){
+//    console.log('吃饭去');
+//    if(order){
+//        order();
+//    }else{
+//        if(row)
+//        row();
+//    }
+      
+
+
+
+// }
+// function row(){
+//     console.log('吃肉肉');
+// }
+// function order(){
+//     console.log('拿快递');
+// }
+// eat(order);
+
+
+
+// function buy(money,success,fail){
+//     if(money){
+//         console.log('下单成功');
+//         if(success)
+//         success();
+//     }else{
+//         console.log('下单失败');
+//         if(fail)
+//         fail();
+//     }
+    
+// }
+// function game_order_success(){
+//     console.log('游戏单，无须发货');
+// }
+// function close_order_success(){
+//     console.log('服饰单,已通知发货');
+
+    
+// }
+// function fail_order(){
+//     console.log('没付款');
+// }
+
+// buy(100,game_order_success,fail_order);
+// buy(0,game_order_success,fail_order);
+// buy(19,close_order_success,fail_order);
+// buy(0,close_order_success,fail_order);
+
+var list=[
+  {
+    name: '王花花',
+    salary: 100,
+  },
+  {
+    name: '李拴蛋',
+    salary: 200,
+  },
+  {
+    name: '牛备备',
+    salary: 300,
+  },
+];
+function each(list,callback){
+    for(var i=0;i<list.length;i++){
+         var a=list[i];
+         callback(a);
+       
+       
+    }
+}
+function b(a){
+
+if(a.name.startsWith('王')){
+           console.log(a);
+}
+}
+each(list,b);
+
+})();
+
+</script>
