@@ -1,0 +1,196 @@
+<style>
+        body {
+          font-family: sans-serif;
+          font-size: 20px;
+        }
+        label {
+          display: block;
+          padding: 5px;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+          user-select: none;
+        }
+        label:hover {
+          background: rgba(0, 0, 255, .1);
+        }
+      </style>
+      
+      <div>
+        <button id="all">全选</button>
+        <button id="none">全不选</button>
+        <button id="reverse">倒置</button>
+      </div>
+      
+      <label>
+        <input type="checkbox"> Item
+      </label>
+      <label>
+        <input type="checkbox"> Item
+      </label>
+      <label>
+        <input type="checkbox"> Item
+      </label>
+      <label>
+        <input type="checkbox"> Item
+      </label>
+      <label>
+        <input type="checkbox"> Item
+      </label>
+      <label>
+        <input type="checkbox"> Item
+      </label>
+      <label>
+        <input type="checkbox"> Item
+      </label>
+      <label>
+        <input type="checkbox"> Item
+      </label>
+      <label>
+        <input type="checkbox"> Item
+      </label>
+      <label>
+        <input type="checkbox"> Item
+      </label>
+     <script>
+      var all=document.querySelector('#all');
+      var list=document.querySelectorAll('[type=checkbox]');
+      var none=document.querySelector('#none');
+      var reverse=document.querySelector('#reverse');
+
+
+    //   all.addEventListener('click',function(){
+    //      list.forEach(function(item){
+    //        item.checked=true;
+    //      });
+    //    });
+     
+
+    //   none.addEventListener('click',function(){
+    //     list.forEach(function(item){
+    //       item.checked=false;
+    //     });
+    //   });
+     
+    //  reverse.addEventListener('click',function(){
+    //    list.forEach(function(item){
+    //      item.checked=! item.checked;
+    //    });
+    //  });
+     
+     
+
+     
+//     //  有任何y一个元素被点击了，就清掉所有元素，除了被点击的这个元素；
+//     list.forEach(function(item){
+//       item.addEventListener('click',function(){
+//         //有任何一个元素被点击就清掉所有元素的钩，除了被点击的这个元素；
+//         uncheck_all(this);
+//       });
+
+//     });
+    
+// //这个函数目的是设置一个除了他自己其他都会被清除打钩的函数
+// function uncheck_all(except){
+//   list.forEach(function(item){
+//     //如果其中的一个等于被钩的一个元素，那就返回他还是在被钩状态，其他的就取消打钩；
+//     if (item===except)
+//     return;
+//     item.checked=false;
+//   })
+
+// }
+
+
+
+
+
+
+
+
+ //  function uncheck_all(except) {
+// /*迭代所有元素*/
+// list.forEach(function (item) {
+// /*如果正在迭代的元素是传进来的例外元素，那么就不要管，直接放弃本次迭代*/
+// if (item === except)
+// return;
+
+// /*否则取消打钩*/
+// item.checked = false;
+// });
+// }
+
+// list.forEach(function (item) {
+// /*给每一个checkbox绑定点击事件*/
+// item.addEventListener('click', function (e) {
+// if (e.ctrlKey || e.metaKey || e.shiftKey)
+// return;
+
+// /*有任何一个元素被点击了就清掉所有元素的勾，除了被点击的这个元素≈*/
+// uncheck_all(this);
+// });
+// });
+// 
+// function uncheck_all(except){
+//   list.forEach(function(item){
+//     if(item===except)
+//     return;
+//     item.checked=false;
+
+//   });
+// }
+// list.forEach(function(item){
+//   item.addEventListener('click',function(e){
+//     if(e.ctrlKey || e.mateKey || e.shiftKey)
+//     return;
+//     uncheck_all(item);
+//   });
+// });
+
+//迭代所有list，如果有shiftKey，记录终点的索引，
+//再一个函数批量处理打钩或者不打钩
+//或者没有shiftkey，那他就是下一次的起点，记录这个起点。记录这个起点的索引
+//函数toggle_between()怎么处理，
+// 先迭代所有的list，传入item和i，分两种情况
+// 从上到下选择或者从下到上选择
+//从上到下那么终点大于起点
+// 如果当前选项的索引大于等于开始索引小于等于结束索引就应用起点选项的状态
+//如果从下到上就是终点索引小于起点
+//当前选项索引小于等于起点索引而且大于等于终点索引应用起点状态
+
+
+
+
+var start
+    ,start_index
+    ,end_index
+    ;
+
+    function toggle_check(){
+      list.forEach(function(item,i){
+        if(start_index<end_index){
+          if(i>=start_index &&i<=end_index){
+            item.checked=start.checked;
+          }
+        }else{
+          if(i<=start_index && i>=end_index){
+            item.checked=start.checked;
+          }
+        }
+      });
+    }
+
+
+    list.forEach(function(item,i){
+      item.addEventListener('click',function(e){
+          if(e.shiftKey){
+            end_index=i;
+            toggle_check();
+          }else{
+            start=this;
+            start_index=i;
+          }
+      });
+    });
+  </script>
+  

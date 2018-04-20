@@ -1,41 +1,101 @@
-<div class="nav">
-    <div class="container">
-  <a href="#">item</a>
-  <a href="#">item</a>
-  <a href="#">item</a>
-  <a href="#">item</a>
-  </div>
-  </div>
-  <div class="container">
-  <div class="a">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium at optio sunt blanditiis autem quam incidunt labore minus neque, officia est soluta hic rerum illum accusamus, animi ut dolore nemo?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium eos quos consequatur obcaecati minima aperiam voluptas doloremque, sequi et non culpa ipsum neque asperiores nihil cum expedita autem voluptate dignissimos?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis nostrum vero qui dolor harum quidem architecto ab, repellat assumenda enim accusantium nesciunt nihil, sed eveniet id possimus cumque, perferendis similique!
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus velit enim aliquid quas voluptas optio consequatur vel, quis, harum deleniti quibusdam neque expedita. Ratione repellendus, recusandae delectus nihil quod dolor!
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae necessitatibus recusandae facere quam ipsa voluptates. Optio ipsum reprehenderit ducimus neque, id culpa nobis itaque quibusdam soluta in facilis alias vel?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, exercitationem libero nam illo dolore, dolorem natus quas velit aut, possimus modi! Dicta dolore, sed enim provident consectetur maxime aliquam. Facilis.
-  </div>
-  </div>
-  
 <style>
-    body{
-        box-sizing: border-box;
-    }
-    .nav a{
-        padding: 10px;
-      border: 1px solid red;
-     display: inline-block;
-       
-    }
-    .nav{
-        background: fuchsia;
-       
-    }
-   .container{
-       margin: 0 auto;
-       max-width: 800px;
-   }
-   .a{
-       background: bisque;
-       padding: 30px;
-   }
-</style>
+        body {
+          font-family: sans-serif;
+          font-size: 20px;
+        }
+        label {
+          display: block;
+          padding: 5px;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+          user-select: none;
+        }
+        label:hover {
+          background: rgba(0, 0, 255, .1);
+        }
+      </style>
+      
+      <div>
+        <button id="all">全选</button>
+        <button id="none">全不选</button>
+        <button id="reverse">反选</button>
+      </div>
+      
+      <label>
+        <input type="checkbox"> Item
+      </label>
+      <label>
+        <input type="checkbox"> Item
+      </label>
+      <label>
+        <input type="checkbox"> Item
+      </label>
+      <label>
+        <input type="checkbox"> Item
+      </label>
+      <label>
+        <input type="checkbox"> Item
+      </label>
+      <label>
+        <input type="checkbox"> Item
+      </label>
+      <label>
+        <input type="checkbox"> Item
+      </label>
+      <label>
+        <input type="checkbox"> Item
+      </label>
+      <label>
+        <input type="checkbox"> Item
+      </label>
+      <label>
+        <input type="checkbox"> Item
+      </label>
+      
+      <script>
+        /*选择所有checkbox*/
+        var list = document.querySelectorAll('[type=checkbox]');
+        /*全不选
+        * @param Element except 例外的元素
+        * */
+        function uncheck_all(except) {
+          /*迭代所有元素*/
+          list.forEach(function (item) {
+            /*如果正在迭代的元素是传进来的例外元素，那么就不要管，直接返回*/
+            if (item === except)
+              return;
+            /*否则取消打钩*/
+            item.checked = false;
+          });
+        }
+        list.forEach(function (item) {
+          /*给每一个checkbox绑定点击事件*/
+          item.addEventListener('click', function () {
+            /*有任何一个元素被点击了就清掉所有元素的勾，除了被点击的这个元素≈*/
+            uncheck_all(this);
+          });
+        });
+      </script>
+      
+      <!--<script>-->
+      <!--var all = document.querySelector('#all');-->
+      <!--var list = document.querySelectorAll('[type=checkbox]');-->
+      
+      <!--all.addEventListener('click', function () {-->
+      <!--list.forEach(function (item, index) {-->
+      <!--item.checked = true;-->
+      <!--});-->
+      <!--});-->
+      <!--</script>-->
+      
+      <!--<script>-->
+      <!--var none = document.querySelector('#none');-->
+      <!--var list = document.querySelectorAll('[type=checkbox]');-->
+      
+      <!--none.addEventListener('click', function () {-->
+      <!--list.forEach(function (item) {-->
+      <!--item.checked = false;-->
+      <!--});-->
+      <!--})-->
+      <!--</script>-->
