@@ -57,15 +57,15 @@
             </ul>
         </div>
         
-        <div class="login-area col-6">
-            <button class="button">登录</button>
-            <div class="mask">
+        <div class="login-area col-6 logins">
+            <button class="button-login">登录</button>
+            
                 <div class="  mobal">
                     <button class="close">关闭</button>
                     <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic quidem aut incidunt nisi qui magni, amet praesentium delectus, corrupti aliquam libero deserunt voluptatem dolore autem, quasi doloremque repudiandae cumque molestiae.</div>
                 </div>
             
-        </div>
+        
     </div>
 </div>
 
@@ -75,7 +75,7 @@
         overflow: hidden;
        background: #eee;
     }
-
+    
     .row{
         
         font-size: 0;
@@ -142,7 +142,7 @@
        
     }
     .menu-content[hidden]{
-        left:-100%;
+    left:-100%;
     }
 
     .table{
@@ -156,10 +156,7 @@
     }
    
     
-    .mask{
-       
-        background:rgba(0,0,0,0.3);
-    }
+   
     .mobal{
        background: #fff;
        display: none;
@@ -185,9 +182,13 @@
     .mobal.show{
         display:inline-block;
     }
+
+    .contant{
+        border: 1px solid red;
+    }
    
 </style>
-<script>
+<!-- <script>
     var menu_trigger=document.querySelector('.menu-trigger');
     var menu_close=document.querySelector('.menu-close');
     var menu_content=document.querySelector('.menu-content');
@@ -241,8 +242,8 @@
     })
     /*menu-login 结束*/
    
-//      var close=document.querySelector('.close');
-//      var button=document.querySelector('.button');
+      var close=document.querySelector('.close');
+     var button=document.querySelector('.button');
 //      var mobal=document.querySelector('.mobal');
 
    
@@ -257,4 +258,94 @@
 // });
 
 
+</script> -->
+
+<script>
+    var menu_trigger=document.querySelector('.menu-trigger');
+    var menu_content=document.querySelector('.menu-content');
+
+    menu_trigger.addEventListener('click',function (){
+        menu_content.hidden=!menu_content.hidden;
+    });
+    menu_content.addEventListener('click',function(){
+        menu_content.hidden=true;
+    });
+    
+    
+
+
+    
+
 </script>
+<script>
+    var menu_login=document.querySelector('.menu-login');
+    var table=document.querySelector('.table');
+    
+    function show(){
+       table.classList.add('show');
+    }
+    function hide(){
+        table.classList.remove('show');
+    }
+    function visible(){
+        return table.classList.contains('show');
+    }
+
+    menu_login.addEventListener('click',function(){
+      visible() ? hide() : show();
+    });
+    document.addEventListener('click',function(e){
+     var el=e.target.closest('.table');//获得这个冒泡元素的第一个祖先
+     if(!el && e.target !==menu_login)
+     hide();
+     
+    });
+
+   
+
+</script>
+<script>
+    var button_login=document.querySelector('.button-login');
+    var mobal=document.querySelector('.mobal');
+    var close=document.querySelector('.close');
+
+    function button_show(){
+        mobal.classList.add('show');
+    }
+    function button_hide(){
+        mobal.classList.remove('show');
+    }
+    button_login.addEventListener('click',button_show);
+    close.addEventListener('click',button_hide);
+
+</script>
+
+<script>
+  var   li_all=document.querySelectorAll('li');
+    for(var i=0;i<li_all.length;i++){
+       var li=li_all[i];
+        li.addEventListener('click',function(e){
+            var list=this.querySelector('ul');
+            if(!list || e.target !==this)
+         return;
+        list.hidden=!list.hidden;
+       })
+   }
+
+
+
+var li=document.querySelectorAll('li');
+   for(var i=0;i<li.lenght;i++){
+       var item=li[i];
+       item.addEventListener('click',function(e){
+           var list=this.querySelector('ul');
+           if(!this || e.target !==this)
+           return;
+           list.hidden=!list.hidden;
+
+
+       });
+   }
+</script>
+
+

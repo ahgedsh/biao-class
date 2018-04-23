@@ -77,6 +77,25 @@
     //      item.checked=! item.checked;
     //    });
     //  });
+
+    all.addEventListener('click',function(){
+      list.forEach(function(item){
+        item.checked=true;
+
+      })
+
+
+    })
+    none.addEventListener('click',function(){
+      list.forEach(function(item){
+        item.checked=false;
+      })
+    })
+    reverse.addEventListener('click',function(){
+      list.forEach(function(item){
+        item.checked=!item.checked;
+      })
+    })
      
      
 
@@ -101,12 +120,21 @@
 
 // }
 
+list.forEach(function(item){
+  item.addEventListener('click',function(e){
+    if(e.ctrlKey || e.shiftKey || e.mateKey)
+    return;
+    uncheck_all(this);
+  })
+})
 
-
-
-
-
-
+function uncheck_all(except){
+  list.forEach(function(item){
+    if(item===except)
+    return;
+    item.checked=false;
+  })
+}
 
  //  function uncheck_all(except) {
 // /*迭代所有元素*/
@@ -192,5 +220,49 @@ var start
           }
       });
     });
+
+
+
+
+
+
+
+
+    var list=document.querySelectorAll('[type=checkbox]');
+    var start;
+    var start_index;
+    var end_index;
+
+
+    function toggle_check(){
+      list.forEach(function(item){
+        item.addEventListener('click',function(i){
+          if(i<=end_index && i>=start_index){
+            item.checked=start.checked;
+          }else{
+            if(i<=start_index && i>=end_index){
+              item.checked=start.checked;
+            }
+                
+          }
+
+
+        })
+      })
+    }
+
+    list.forEach(function(item){
+      item.addEventListener('click',function(e){
+        if(e.shiftKey){
+          end_index=i;
+          toggle_check();
+        }else{
+          start=this;
+          start_index=i;
+        }
+
+
+      })
+    })
   </script>
   

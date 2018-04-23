@@ -1,7 +1,103 @@
-<script>
- var ele=document.createElement('a');
- ele.classList.add('yo');
- ele.innerText='muhh';
- ele.innerHTML='<div>buu<a>aaaa</a></div>';
- console.log(ele);
-</script>
+<style>
+        body {
+    margin: 0;
+    font-family: sans-serif;
+  }
+
+  .tip-trigger {
+    background: pink;
+  }
+
+  .tip {
+    position: fixed;
+    background: #222;
+    color: #fff;
+    padding: 5px;
+    /*-webkit-border-radius: 3px;*/
+    /*-moz-border-radius: 3px;*/
+    /*border-radius: 3px;*/
+    -webkit-box-shadow: 0 0 2px #000;
+    -moz-box-shadow: 0 0 2px #000;
+    box-shadow: 0 0 2px #000;
+    opacity: .8;
+  }
+      </style>
+      
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. At corporis dignissimos eum facilis
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. At corporis dignissimos eum facilis
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. At corporis dignissimos eum facilis
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. A animi iusto, odio tenetur exercitationem quaerat aliquid delectus. Natus, molestiae ipsam adipisci quasi repellat dolorem molestias! Doloremque animi nemo minus cum.
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit aliquam qui amet in placeat omnis veritatis, cupiditate ut exercitationem recusandae, autem, esse iure dolores adipisci at error sapiente. At, sed?
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos delectus officia numquam vel inventore. Accusantium nesciunt aliquam dicta rem debitis nobis reprehenderit eaque praesentium, vero illum aperiam dolores architecto blanditiis?
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae animi nostrum praesentium quasi aliquid possimus earum impedit dolorem a. Amet, officiis! Architecto, eos maiores? Quae, expedita. Magni unde ad optio!
+      olo<span data-tip="Yoooooo" class="tip-trigger">Yo</span>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error harum corporis, quae iusto possimus eos fuga ducimus est ipsum illum, maxime repellendus. Incidunt esse tempore, minima rem est velit adipisci?
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio aliquid sequi temporibus assumenda, quia amet molestias quasi distinctio soluta, modi pariatur, minima quo odit. Doloremque recusandae totam perspiciatis amet in.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus tempore blanditiis totam, animi consequatur, possimus, aut odit ratione adipisci unde magnam. Quae eos ad dolorum, eveniet rem quis reiciendis architecto!
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus deleniti inventore eius earum possimus doloremque iusto libero adipisci cumque alias voluptatem impedit atque, saepe sunt. Iusto excepturi cumque perspiciatis
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. At corporis dignissimos eum facilis
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. At corporis dignissimos eum facilis
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. At corporis dignissimos eum facilis
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. A animi iusto, odio tenetur exercitationem quaerat aliquid delectus. Natus, molestiae ipsam adipisci quasi repellat dolorem molestias! Doloremque animi nemo minus cum.
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit aliquam qui amet in placeat omnis veritatis, cupiditate ut exercitationem recusandae, autem, esse iure dolores adipisci at error sapiente. At, sed?
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos delectus officia numquam vel inventore. Accusantium nesciunt aliquam dicta rem debitis nobis reprehenderit eaque praesentium, vero illum aperiam dolores architecto blanditiis?
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae animi nostrum praesentium quasi aliquid possimus earum impedit dolorem a. Amet, officiis! Architecto, eos maiores? Quae, expedita. Magni unde ad optio!
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. At corporis dignissimos eum facilis
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. At corporis dignissimos eum facilis
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. At corporis dignissimos eum facilis
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. A animi iusto, odio tenetur exercitationem quaerat aliquid delectus. Natus, molestiae ipsam adipisci quasi repellat dolorem molestias! Doloremque animi nemo minus cum.
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit aliquam qui amet in placeat omnis veritatis, cupiditate ut exercitationem recusandae, autem, esse iure dolores adipisci at error sapiente. At, sed?
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos delectus officia numquam vel inventore. Accusantium nesciunt aliquam dicta rem debitis nobis reprehenderit eaque praesentium, vero illum aperiam dolores architecto blanditiis?
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae animi nostrum praesentium quasi aliquid possimus earum impedit dolorem a. Amet, officiis! Architecto, eos maiores? Quae, expedita. Magni unde ad optio!
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. At corporis
+      <script>
+         var tip_trigger=document.querySelector('.tip-trigger');
+         var tip;
+         var position;
+
+        tip_trigger.addEventListener('mouseenter',function(){
+             show();
+             position_tip();
+
+         });
+        tip_trigger.addEventListener('mouseleave',function(){
+               hide();
+         });
+
+         function show(){
+             if(tip)
+             return;
+            
+             
+             tip=document.createElement('div');
+             tip.classList.add('tip');
+             tip.innerText=tip_trigger.dataset.tip;
+             document.body.appendChild(tip);
+
+             
+         }
+         function hide(){
+             tip.remove();
+             tip=null;
+         };
+         function position_tip(){
+              position=tip_trigger.getBoundingClientRect();
+            
+              if(position.top<tip.offsetHeight){//tip_trigger的上边的宽度小于tip的宽度
+                 tip.style.top=position.top+tip.offsetHeight-10;
+             }else{
+                tip.style.top=position.top-tip.offsetHeight-3;
+             }
+         
+              
+                  tip.style.left=position.left;
+             
+         }
+
+    
+            
+         
+    
+      
+      
+      </script>
