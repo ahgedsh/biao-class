@@ -1,0 +1,14 @@
+
+<script>
+  var username = 'biaoyansu';
+  var http = new XMLHttpRequest();
+  http.open('get', 'https://api.github.com/users/' + username);
+  http.send();
+  http.addEventListener('load', function () {
+    var text = this.responseText;
+    var data = JSON.parse(text);
+    console.log(data);
+  });
+
+
+</script>

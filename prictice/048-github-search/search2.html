@@ -1,0 +1,178 @@
+<form id='search-form'>
+    <input id="search_input">
+    <button type="submit">搜索</button>
+</form>
+<div id='number'></div>
+<div id='user_list'></div>
+<button id='more' hidden>加载更多</button>
+<div id='placeholer' class="tac"hidden>没了</div>
+<button id='top_button'hidden>TOP</button>
+<style>
+    img {
+        width: 80px;
+        margin-bottom: 5px;
+
+    }
+
+    [hidden] {
+        display: none !important;
+
+    }
+
+
+    .user>* {
+        display: inline-block;
+        vertical-align: top;
+        padding: 5px;
+        color: #555;
+
+
+    }
+
+    .user {
+        background: white;
+        border: 1px solid rgba(0, 0, 0, .1);
+        margin: 10px;
+    }
+
+    body {
+        background: #eee;
+        font-family: sans-serif;
+    }
+
+    #top_button {
+        right: 10px;
+        bottom: 10px;
+        position: fixed;
+        background: rgba(0, 0, 0, .4);
+        color: #fff;
+        padding: 10px;
+    }
+    .tac{
+        text-align: center;
+    }
+</style>
+
+<script>
+    var el_form = document.getElementById('search-form')
+        , el_input = document.getElementById('search_input')
+        , el_number = document.getElementById('number')
+        , el_user_list = document.getElementById('user_list')
+        , el_more = document.getElementById('more')
+        , el_top_button = document.getElementById('top_button')
+        ,el_placeholer=document.getElementById('placeholer')
+        , keyword
+        ,no_more
+        ,limit=10
+        ,amount
+        , page = 1;
+    var res;
+    init();
+
+    //入口函数
+    function init() {
+        add();
+        more_list();
+        top_button();
+    }
+     //入口函数
+    function add() {
+        el_form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            keyword = el_input.value;
+
+            if (!keyword) {
+                alert('请输入用户名');
+                return;
+            }
+            reset_page();
+            reset_user_list();
+            search(keyword);
+
+
+        });
+    }
+
+    function reset_page() {
+        page = 1;
+    }
+
+    function reset_user_list() {
+        el_user_list.innerHTML = '';
+    }
+    function top_button() {
+        el_top_button.addEventListener('click', function () {
+            window.scrollTo(0, 0);
+        });
+
+    }
+    window.addEventListener('scroll',function(){
+        if(window.scrollY>500)
+        el_top_button.hidden=false;
+    })
+
+    //有一个渲染页面的函数
+    function render() {
+        var html = el_user_list.innerHTML;
+        var down = '';
+        res.items.forEach(function (user) {
+            html = html + `<div class='user'>
+                      <img class='avatar' src='${user.avatar_url}'>
+                      
+                      <div class='info'>
+                      <div class='username'>${user.login}</div>
+                      <div><a href="${user.url}">${user.url}</a></div>
+                      </div>
+                      </div>`;
+            down = `<div>共有${res.total_count}条结果</div>`;
+        });
+        el_user_list.innerHTML = html;
+        el_number.innerHTML = down;
+        el_more.hidden = false;
+
+        //如果每页的数量乘以页数大于总数就说明当前页就是最后页
+        no_more=page*limit>=amount;
+        //加载更多这个按钮就隐藏
+        if(no_more){
+            el_more.hidden=true;
+            el_placeholer.hidden=false;
+
+        }else{
+            el_more.hidden=false;
+            el_placeholer.hidden=true;
+        }
+
+    }
+    
+
+    //有一个取得用户信息的函数
+    function search() {
+        //开始搜索时禁用按钮
+        el_more.disabled = true;
+        //显示加载中
+        el_more.innerHTML = '加载中...'
+
+        var http = new XMLHttpRequest();
+        http.open('get', 'https://api.github.com/search/users?q=' + keyword  + '&page=' + page+'&per_page=' + limit);
+        http.send();
+        http.addEventListener('load', function () {
+            res = JSON.parse(this.responseText);
+            //拿到搜索结果总数
+            amount=res.total_count;
+            render();
+            //数据返回之后，启用按钮
+            el_more.disabled = false;
+            el_more.innerHTML = '加载更多';
+        });
+
+
+    }
+
+    function more_list() {
+        el_more.addEventListener('click', function () {
+            page++;
+            search();
+        });
+    }
+
+</script>

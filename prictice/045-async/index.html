@@ -69,8 +69,10 @@
     function render_user() {
       var html =
         ` id: ${user.login} <br>
-       头像：<img src="${user.avatar_url}">
-      `
+       头像：<img src="${user.avatar_url}"
+       `
+      
+   
       el_user.innerHTML = html;
     }
     function search(username) {
@@ -91,12 +93,12 @@
       http.open(methed, url);
       http.send();
       http.addEventListener('load', function () {
-        var data = JSON.parse(this.responseText);
-        if (fn)
+        var data = JSON.parse(this.responseText);//转换成文字
+          if(fn)
           fn(data);
       });
     }
   </script>
- 
- 
 
+ 
+ 

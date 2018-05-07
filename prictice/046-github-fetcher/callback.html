@@ -1,0 +1,19 @@
+<script>
+  var arr=[1,2,3,4,5];
+  var aww=[3,4,5,6,7,8];
+  function each(arr,each_do){
+      for(var i=0;i<arr.length;i++){
+          var item=arr[i];
+          each_do(item);
+
+      }
+
+  }
+  each(aww, function(item){
+      if(item%2==0)
+      console.log(item);
+  })
+
+
+
+</script>

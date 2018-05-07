@@ -1,0 +1,31 @@
+<div id="user-list"></div>
+<script>
+    var user_list=[
+        {
+            name:'whh',
+            age:20
+        },
+        {
+            name:'lsd',
+            age:23
+        },
+        {
+            name:'zks',
+            age:24,
+        },
+    ];
+   var el_list_user=document.getElementById('user-list');
+   init();
+   function render(){
+       var html="";
+       user_list.forEach(function(aaa){
+           html=html+`<div>姓名：${aaa.name},年龄：${aaa.age}</div>`
+          
+
+       });
+       el_list_user.innerHTML=html;
+   }
+ function init(){
+     render();
+ }
+</script>

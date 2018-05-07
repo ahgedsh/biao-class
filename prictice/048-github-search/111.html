@@ -1,0 +1,162 @@
+<form id="search-form">
+  <input id="search-input">
+  <button type="submit">搜索</button>
+</form>
+<div id='number'></div>
+<div id='user-list' ></div>
+<div id='more' class="tac"hidden >加载更多</div>
+<div id='placeholer'class="tac" hidden>没了 ...</div>
+<button id='top-button' hidden>TOP</button>
+<style>
+  [hidden]{
+    display: none !important;
+  }
+  #search-input,
+  button
+  {
+    padding: 10px;
+
+  }
+
+#user-list>*,
+#more{
+  background: #eee;
+  margin: 10px;
+  vertical-align: top;
+}
+img{
+  width: 60px;
+}
+.tac{
+  text-align: center;
+}
+#more{
+  padding: 10px 0;
+  cursor: pointer;
+
+
+}
+#top-button{
+  position: fixed;
+  background: rgba(0,0,0,0.4);
+  color: #ffffff;
+  padding: 10px;
+  border:none;
+  right: 10px;
+  bottom: 10px;
+  }
+
+
+</style>
+<script>
+  var el_input=document.getElementById('search-input')
+     ,el_form=document.getElementById('search-form')
+     ,el_number=document.getElementById('number')
+     ,el_more=document.getElementById('more')
+     ,el_user_list=document.getElementById('user-list')
+     ,el_top_button=document.getElementById('top-button')
+     ,el_placeholer=document.getElementById('placeholer')
+     ,keyword
+     ,no_more
+     ,res
+     ,page=1
+     ,amount
+     ,limit=10
+     ;
+     init();
+     //入口函数
+     function init(){
+      word();
+      more();
+      top_button();
+
+     }
+
+     window.addEventListener('scroll',function(){
+       if(window.scrollY>500)
+       el_top_button.hidden=false;
+     });
+     //得到关键词
+     function word(){
+       el_form.addEventListener('submit',function(e){
+         e.preventDefault();
+          keyword=el_input.value;
+          if(!keyword){
+           alert('请输入用户名');
+           return;
+          }
+          page=1;
+          el_user_list.innerHTML='';
+          el_placeholer.hidden=el_more.hidden=true;
+          search(keyword);
+       });
+
+
+     }
+
+     function top_button(){
+       el_top_button.addEventListener('click',function(){
+         window.scrollTo(0,0);
+       })
+     }
+
+     function more(){
+       el_more.addEventListener('click',function(){
+         
+         page++;
+         search(keyword);
+       })
+     }
+
+     //渲染页面函数
+     function render(){
+       var html=el_user_list.innerHTML;
+       var all="";
+       res.items.forEach(function(user){
+         html=html+`<div><img class='avatar' src='${user.avatar_url}'>  ${user.login}</div>`;
+         all=`<div> 共有${res.total_count}条结果`
+       });
+       el_user_list.innerHTML=html;
+       el_number.innerHTML=all;
+       el_more.hidden=false;
+      //  if(page*limit>amount){//如果页面乘以10大于总数
+      //  el_more.hidden=true;//那就不显示加载更多
+      //  el_placeholer.hidden=false;
+      //  }else{
+      //    el_more.hidden=false;
+      //    el_placeholer.hidden=true;
+      //  }
+       //no_more 是布尔值，所有可以这样写
+       var no_more=page*limit>=amount;//no_more等于页面乘以10大于总数
+       el_placeholer.hidden=!no_more;//没了隐藏，因为不大于总数
+       el_more.hidden=no_more;//加载更多隐藏，因为大于总数
+     }
+
+
+     //通过关键词搜索的函数
+     function search(keyword){
+      el_more.disabled = true;
+       el_more.innerText='加载中...';
+       var http=new XMLHttpRequest();
+       http.open('get','https://api.github.com/search/users?q='+keyword+ '&page=' + page +'&per_page='+limit);
+       http.send();
+       http.addEventListener('load',function(){
+         res=JSON.parse(this.responseText);
+         amount=res.total_count;
+         render();
+         el_more.disabled = false;
+         el_more.innerText='加载更多';
+       });
+     }
+
+
+    
+
+
+
+
+
+
+
+
+</script>

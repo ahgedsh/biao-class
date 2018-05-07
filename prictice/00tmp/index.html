@@ -1,28 +1,76 @@
 <script>
-function User(name,color,age){
-  this.name=name;
-  this.color=color;
-  this.age=age;
-}
-var lsd =new User('whh','red',18);
-console.log('lsd',lsd);
-function Book(){
-  this.a=12;
-  this.b=12;
-}
-var book=new Book();
-console.log(book);
-function Dog(){
-  this.jiao=function(){
-    console.log('muhaha');
-   
+function user(name){
+  var sex,age;
+
+return{
+  getName:function (){
+    return name;
+  },
+  setName:function (newName){
+    name=newName;
+  
+  },
+  getAge:function(){
+    return age;
+  },
+  setAge:function(newAge){
+    age=newAge;
+  },
+  getSex:function(){
+    return sex;
+  },
+  setSex:function(newSex){
+    sex=newSex;
   }
-  this.age=10;
-  this.gender='meal';
+
+
 }
-var dog=new Dog();
-console.log(dog);
-dog.jiao();
+}
+var whh=user('whh');
+whh.setSex('women');
+whh.setAge(32);
+var name=whh.getName();
+var age=whh.getAge();
+var sex=whh.getSex();
+console.log(name,age,sex);
+</script>
+<script>
+  function user(name){
+    var sex,age;
+ 
+    return {
+      getName:function(){
+        return name;
+      },
+      setName:function(newName){
+        name=newName;
+      },
+      getAge:function (){
+        return age;
+      },
+      setAge:function(newAge){
+        age=newAge;
+      },
+      getSex:function (){
+        return sex;
+      },
+      setSex:function(newSex){
+         sex=newSex;
+      }
+    }
+  }
+
+var sld=user('lsd');
+sld.setAge(29);
+sld.setSex('aaa');
+var age=sld.getAge();
+var sex=sld.getSex();
+var name=sld.getName();
+console.log(name,age,sex);
+
+
+
+
 
 
 </script>
