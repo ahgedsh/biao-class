@@ -51,25 +51,28 @@
 // };
 var el=require('./element');
 var search=require('./search');
-var limit=1;
+var limit=10;
 var page=1;
 var keyword;
+
 
 function add_events(){
   detect_submit();
   detect_next_page();
   detect_top();
+  
+ 
+
 }
-function detect_top(){
-  el.top.addEventListener('click',function(){
-    console.log(1);
-  })
-}
+
+
+
 
 function detect_submit(){
   el.form.addEventListener('submit',function(e){
     e.preventDefault();
-    var keyword=el.input.value;
+     keyword=el.input.value;
+    
     search.user(keyword,function(data){
       el.render_user_list(data);
     });
@@ -90,9 +93,21 @@ function detect_next_page(){
   
 }
 
+
+function detect_top() {
+  el.top.addEventListener('click',function(){
+   window.scrollTo(0,0);
+  })
+}
+
+
 module.exports={
   add_events,
   detect_submit,
   detect_top,
+  
+  
+  
+ 
 
 }

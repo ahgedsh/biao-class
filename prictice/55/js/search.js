@@ -23,8 +23,21 @@
 // module.exports = {
 //   user: user
 // }
+var el=require('./element');
+var share=require('./share');
+
+
+function set_keyword(kwd){
+  el.input.value=kwd;
+  console.log(kwd);
+  
+  share.set_keyword(kwd);
+}
 
 function user(keyword,on_success,config){
+  if(!keyword){
+    return;
+  }
   var def={
     limit:5,
     page:1,
@@ -38,9 +51,12 @@ function user(keyword,on_success,config){
   http.addEventListener('load',function(){
     var data=JSON.parse(this.responseText);
         on_success(data);
+    var amount=data.total_count;
+    
   });
 
 }
 module.exports={
   user,
+  set_keyword,
 }
