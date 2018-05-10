@@ -82,7 +82,7 @@ function sync_to_store(){
      render();
  }
 
-
+//测试
  init({
      el:'#history-list',
      on_click:function(keyword){

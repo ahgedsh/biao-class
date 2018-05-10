@@ -1,106 +1,73 @@
 
 
-<div class="col" id='pagination'>
+    <button id='previous-page'>上一页</button>
+<div class="col" id='pagination'></div>
+<button id="next-page">下一页</button>
+    
    
 
-</div>
 
 
   
 <script>
-//     var current_page=1;// 当前页面
-//     var page_amount=15;//总页面
-//     var max_btn_length=5;//最大按钮长度
-//     var el_pagination=document.getElementById('pagination');
+    var current_page=1;// 当前页面
+    var page_amount=15;//总页面
+    var max_btn_length=5;//最大按钮长度
+    var el_pagination=document.getElementById('pagination');
+    var previous_page=document.getElementById('previous-page');
   
-//    render();
-  
-//     function render(){
-//         el_pagination.innerHTML='';
-//         var start;
-//         var end;
-//         var middle=Math.ceil(max_btn_length/2);//中键为当前可显示按钮除于二
-//         var renaching_left=current_page<=middle;//靠近左边的情况  被点击的页面小于中键
-//         var renaching_right=current_page>=page_amount-middle;//靠近右边的页面，被点击的页面大于总页面减去中键
-//         if(renaching_left){
-//             start=1;
-//             end=max_btn_length;
-//         }else if(renaching_right){
-//             start=page_amount-(max_btn_length-1);
-//             end=page_amount;
+   render();
+   detect_previous_page();
+   function detect_previous_page(){
+       previous_page.addEventListener('click',function(){
+          current_page=1;
+       })
 
-//         }else{
-//             start=current_page-(middle-1);//开始键是当前被点击的减2
-//             end=current_page+(middle-1);//结束键是当前点击的加二
-//         }
+   }
+  
+    function render(){
+        el_pagination.innerHTML='';
+        var start;
+        var end;
+        var middle=Math.ceil(max_btn_length/2);//中键为当前可显示按钮除于二
+        var renaching_left=current_page<=middle;//靠近左边的情况  被点击的页面小于中键
+        var renaching_right=current_page>=page_amount-middle;//靠近右边的页面，被点击的页面大于总页面减去中键
+        if(renaching_left){
+            start=1;
+            end=max_btn_length;
+        }else if(renaching_right){
+            start=page_amount-(max_btn_length-1);
+            end=page_amount;
+
+        }else{
+            start=current_page-(middle-1);//开始键是当前被点击的减2
+            end=current_page+(middle-1);//结束键是当前点击的加二
+        }
          
 
-//         for(var i=start;i<=end;i++){
+        for(var i=start;i<=end;i++){
            
-//             var btn=document.createElement('button');
-//             btn.innerText=i;
-//             btn.dataset.page=i;
-//             if(i==current_page){
-//                 btn.style.background='pink';
-//             }
-//             el_pagination.appendChild(btn);
-//             btn.addEventListener('click',function(e){
-//                 current_page=parseInt(e.currentTarget.dataset.page);
-//                 render();
+            var btn=document.createElement('button');
+            btn.innerText=i;
+            btn.dataset.page=i;
+            if(i==current_page){
+                btn.style.background='pink';
+            }
+            el_pagination.appendChild(btn);
+            btn.addEventListener('click',function(e){
+                current_page=parseInt(e.currentTarget.dataset.page);
+                render();
 
           
-//             });
+            });
 
-//         }
-
-
+        }
 
 
 
-//     }
-
-var el_pagination=document.getElementById('pagination');
-
-var max_btn_length=5;
-var current_page=1;
-var page_amount=15;
-render();
-function render(){
-    el_pagination.innerHTML='';
-var start
-   ,end
-   ,middle=Math.ceil(max_btn_length/2)
-   ,renaching_left=current_page<=middle
-   ,renaching_right=current_page>=page_amount-middle
-   ;
-   if(renaching_left){
-       start=1;
-       end=max_btn_length;
-   }else if(renaching_right){
-       start=page_amount-(max_btn_length-1);
-       end=page_amount;
-   }else{
-       start=current_page-(middle-1);
-       end=current_page+(middle-1);
-   }
-   for(var i=start;i<=end;i++){
-       var btn=document.createElement('button');
-       btn.innerText=i;
-       btn.dataset.page = i;
-       
-       if(i==current_page)
-       btn.style.background='pink';
-
-       el_pagination.appendChild(btn);
-       btn.addEventListener('click',function(e){
-           current_page=parseInt(e.currentTarget.dataset.page);
-           render();
-       });
-       
-
-   }
 
 
-}
+    }
+
 
 </script>
