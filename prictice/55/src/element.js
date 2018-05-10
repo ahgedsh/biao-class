@@ -92,7 +92,7 @@
         }
 
    }
-      
+   
 
       module.exports={
         form,
@@ -103,5 +103,6 @@
         top,
         placeholer,
         amount,
+        
   
       }

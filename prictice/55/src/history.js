@@ -1,17 +1,33 @@
 var store=require('./store');
 var search=require('./search');
+var el=require('./element');
 var el_list=document.getElementById('history-list');
 var util=require('./util');
 var list;
+function set(key, val) {
+    /*加保鲜膜（JSON化）*/
+    var json = JSON.stringify(val);
+    /*存冰箱（状态稳定不轻易改变）*/
+    localStorage.setItem(key, json);
+  }
+  
+  /*从冰箱取*/
+  function get(key) {
+    /*从冰箱取到带保鲜膜的数据*/
+    var json = localStorage.getItem(key);
+    /*撕膜（将数据转化为JS可以理解的数据类型）*/
+    return JSON.parse(json);
+  }
 
-function reload_list(){
-    list=store.get('list')||[];
-    
-}
-
-function overwrite_list(data){
-    store.set('list',data);
-}
+function reload_list() {
+    list = get('list') || [];
+    console.log(list);
+  }
+  
+  function overwrite_list(data) {
+    set('list', data);
+  }
+  
 function render_history_list(){
     el_list.innerHTML='';
     list.forEach(function(history){
@@ -53,11 +69,12 @@ function on_delete_click(){
         el_list.hidden=true;
     }
 }
-function show_list(){
-    if(!list.length)
-    return;
-    el_list.hidden=false;
-}
+function show_list() {
+    if (!list.length)
+      return;
+  
+    el_list.hidden = false;
+  }
 
 function hide_list(){
     el_list.hidden=true;
@@ -70,6 +87,8 @@ function append(kwd){
     overwrite_list(list);
 }
 
+      
+
 module.exports={
     reload_list,
     overwrite_list,
@@ -78,6 +97,8 @@ module.exports={
     hide_list,
     show_list,
     on_delete_click,
+    
+    
 
 
 }

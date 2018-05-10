@@ -29,11 +29,13 @@ var share=require('./share');
 
 function set_keyword(kwd){
   el.input.value=kwd;
-  console.log(kwd);
-  
-  share.set_keyword(kwd);
+  keyword=kwd;
+     return keyword;
 }
 
+
+
+ 
 function user(keyword,on_success,config){
   if(!keyword){
     return;

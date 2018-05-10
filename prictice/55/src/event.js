@@ -49,17 +49,20 @@
 //   add_events: add_events,
 //   detect_next_page: detect_next_page,
 // };
-var el=require('./element');
-var search=require('./search');
-var limit=10;
-var page=1;
-var keyword;
+var el = require('./element')
+  , history = require('./history')
+  , search = require('./search')
+  , share = require('./share')
+  
+ 
+;
 
 
 function add_events(){
   detect_submit();
   detect_next_page();
   detect_top();
+  detect_click_input();
   
  
 
@@ -99,15 +102,19 @@ function detect_top() {
    window.scrollTo(0,0);
   })
 }
+function detect_click_input(){
+  el.input.addEventListener('click',function(){
+   keyword=search.set_keyword('qqq');
+   console.log(keyword);
+  });
+}
 
 
 module.exports={
   add_events,
   detect_submit,
   detect_top,
-  
-  
-  
+  detect_click_input,
  
 
 }
