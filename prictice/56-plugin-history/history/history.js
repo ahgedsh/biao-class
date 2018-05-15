@@ -31,22 +31,24 @@ var list=[]
        el.innerHTML='';
        list.forEach(function(keyword){
            var el_keyword=document.createElement('div');
-           el_keyword.classList.add('history');
+           
            el_keyword.innerHTML=`
            <div class="text">${keyword}</div>
            <div class="tool">
                <span class="delete">删除</span>
            </div>`;
+           el_keyword.classList.add('history');
            el.appendChild(el_keyword);
            el_keyword.addEventListener('click',function(){
                if(on_click)
                on_click(keyword);
 
            })
-           el_keyword.querySelector('.delete').addEventListener('click',function(e){
+           el_keyword.querySelector('.delete')
+           .addEventListener('click',function(e){
                e.stopPropagation();
                if(on_delete)
-               on_delete();
+               on_delete(keyword);
                remove(keyword);
            })
 
@@ -88,8 +90,8 @@ function sync_to_store(){
      on_click:function(keyword){
          console.log(keyword);
      },
-     on_delete:function(e){
-         console.log(1);
+     on_delete:function(keyword){
+         console.log(keyword);
      }
      
 
@@ -97,11 +99,11 @@ function sync_to_store(){
 
  });
  
-// add('asd');
-// add('as67ud');
-// add('ghasd');
-// add('anhsd');
-// add('afsd');
+add('asd');
+add('as67ud');
+add('ghasd');
+add('anhsd');
+add('afsd');
     
   
        

@@ -170,6 +170,9 @@ var el
        add:add,
        clear:clear,
        remove:remove,
+       hide:hide,
+       show:show,
+       is_visible:is_visible,
    }
    ;
 function init(config){
@@ -184,17 +187,28 @@ function init(config){
 
 
 }
+function hide(){
+    el.hidden=true;
+}
 
+ function show(){
+     el.hidden=false;
+ }
+function is_visible(){
+    return !el.hidden;
+}
 
 function render(){
     el.innerHTML='';
     list.forEach(function(keyword){
         var el_keyword=document.createElement('div');
+        
         el_keyword.innerHTML=`
             <div class="text">${keyword}</div>
             <div class="tool">
                 <span class="delete">删除</span>
-            </div>`;
+            </div>
+            `;
 
             el_keyword.classList.add('history');
             el.appendChild(el_keyword);

@@ -182,9 +182,16 @@ var el_pagination
        disable:disable,
        enable:enable,
        is_disabled:is_disabled,
-       show:show,
-       hide:hide,
-       is_visible:is_visible,
+       set_amount_and_limit:set_amount_and_limit,
+       show_pagination:show_pagination,
+       hide_pagination:hide_pagination,
+   }
+   function show_pagination(){
+       el_pagination.hidden=false;
+   }
+
+   function hide_pagination(){
+       el_pagination.hidden=true;
    }
 
    function init(user_config){
@@ -198,6 +205,13 @@ var el_pagination
    }
    function calc_page_amount(){
        page_amount=Math.ceil(config.amount/config.limit);
+   }
+
+   function set_amount_and_limit(amount,limit){
+       config.amount=amount;
+       config.limit=limit;
+       calc_page_amount();
+       render_list();
    }
    function calc_start_and_end(){
        var start
@@ -235,7 +249,7 @@ var el_pagination
         <button class="pagination-next">Next</button>
         <button class="pagination-last">Last</button>
     </div>
-   </fieldset>
+     </fieldset>
        `;
        el_pagination_fieldset=el_pagination.querySelector('.pagination-fieldset');
        el_pagination_list=el_pagination.querySelector('.pagination-list');
@@ -307,31 +321,17 @@ var el_pagination
            config.on_page_change(config.current);
        }
    }
-//设置列表总数和每页的数量
-   function set_amount_and_limit(amount,limit){
-       config.amount=amount;
-       config.limit=limit;
-       calc_page_amount();
-       render_list();
-   }
+   
 
    function disable(){
-       el_pagination_fieldset.disabled=true;
+       //el_pagination_fieldset.disabled=true;
+       el_pagination_fieldset.disabled = true;
    }
    function enable(){
        el_pagination_fieldset.disabled=false;
    }
    function is_disabled(){
        return el_pagination_fieldset.disabled;
-   }
-   function show(){
-       el_pagination.hidden=false;
-   }
-   function hide(){
-       el_pagination.hidden=true;
-   }
-   function is_visible(){
-       return !el_pagination.hidden;
    }
 
    module.exports=output;

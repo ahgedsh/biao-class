@@ -1,4 +1,4 @@
-<!doctype html>
+ <!doctype html>
 <html lang="zh-cn">
 <head>
   <meta charset="UTF-8">
@@ -17,6 +17,7 @@
       font-family: sans-serif;
       color: #333;
       margin: 0;
+      position: relative;
     }
     h1 {
       font-size: 25px;
@@ -32,6 +33,7 @@
     }
     form {
       font-size: 0;
+     
     }
     button, input {
       font-size: 15px;
@@ -110,7 +112,62 @@
       right: 10px;
       bottom: 0;
     }
+    #history-list,
+    #remove-all{
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, .2);
+    border-top: 0;
+    font-size: 14px;
+    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, .1);
+    -moz-box-shadow: 0 2px 4px rgba(0, 0, 0, .1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .1);
+    cursor: default;
+  }
+  .history {
+    padding: 5px 10px;
+    font-size: 0;
+  }
+  .history:hover {
+    background: rgba(0, 0, 200, .1);
+  }
+  .history .text,
+  .history .tool {
+    vertical-align: middle;
+    display: inline-block;
+  }
+  .history .text {
+    width: 70%;
+    font-size: .9rem;
+  }
+  .history .tool {
+    display: none;
+    width: 30%;
+    font-size: .6rem;
+    text-align: right;
+    cursor: pointer;
+    color: #aaa;
+  }
+  .history:hover .tool {
+    display: inline-block;
+  }
+  #loading{
+    background: rgba(0, 0, 0, .5);
+    color: #fff;
+    width: 13%;
+    text-align: center;
+    padding: 5px 13px;
+    position: absolute;
+    top: 10px;
+    right: 0;
+  }
+  #remove-all{
+    text-align: center;
+    font-size: 10px;
+    padding: 8px 0;
+  }
+
   </style>
+  <link rel="stylesheet" href="./js/plugin/pagination/pagination.css">;
 </head>
 <body>
 <div class="container">
@@ -123,16 +180,26 @@
            placeholder="请输入用户名"
     >
     <button type="submit">搜索</button>
+    
+      <div id='history-list' hidden></div>
+     
+     <div id='remove-all'hidden>清空历史记录</div>
+
+    
   </form>
+  
   <div id="amount"></div>
   <div id="user-list"></div>
-  <button id="next" class="block" hidden>加载更多</button>
+  
+ 
   <div class="tac" id="placeholer" hidden>谋了 - . -</div>
+  <div id='pagination'hidden></div>
 </div>
 
 <div class="toolbar">
   <button id="top">Top</button>
 </div>
+<div id='loading'hidden>加载中...</div>
 
 <script src="dist/build.js"></script>
 </body>

@@ -1,0 +1,22 @@
+.pagination-pre,
+.pagination-list,
+.pagination-post{
+    display: inline-block;
+}
+
+.pagination button{
+    display: inline-block;
+    background: #fff;
+    padding: 7px;
+    
+}
+button.active {
+    background: #ccc;
+}
+.pagination-fieldset{
+    border:0;
+    display: block;
+    padding: 0;
+    margin: 0;
+}
+
