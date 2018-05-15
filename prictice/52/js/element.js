@@ -18,8 +18,7 @@ var form=document.getElementById('search-form')
      var down='';
      var list = share.get_user_list();
     data.items.forEach(function(user){
-      console.log(data);
-      console.log(data.items);
+      
       
       html = html + `<div class='user'>
       <img class='avatar' src='${user.avatar_url}'>
