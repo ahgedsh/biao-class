@@ -17,13 +17,13 @@
       font-family: sans-serif;
       color: skyblue;
       margin: 0;
+      font-size: 20px;
       position: relative;
      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
      
     }
     input[placeholder],
     button
-    
     {
       color: skyblue ;
     }
@@ -31,10 +31,7 @@
       font-size: 25px;
       font-weight: lighter;
     }
-    img {
-      width: 60px;
-      height: 60px;
-    }
+    
     a {
       text-decoration: none;
       color: #777;
@@ -92,15 +89,21 @@
       margin-top: 10px;
       margin-bottom: 10px;
     }
+
     .user > * {
       display: inline-block;
       vertical-align: top;
-      padding: 5px;
+      padding: 10px;
       color: skyblue;
       font-size: 80%;
     }
     .user .info > * {
       margin-bottom: 2px;
+    }
+    .user img{
+      display: block;
+      width: 80px;
+      height: 80px;
     }
     .username {
       font-size: 15px;
@@ -128,7 +131,7 @@
     background: #fff;
     border: 1px solid rgba(0, 0, 0, .2);
     border-top: 0;
-    font-size: 14px;
+    font-size: 16px;
     -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, .1);
     -moz-box-shadow: 0 2px 4px rgba(0, 0, 0, .1);
     box-shadow: 0 2px 4px rgba(0, 0, 0, .1);
@@ -136,7 +139,7 @@
   }
   .history {
     padding: 5px 10px;
-    font-size: 0;
+    font-size: 0px;
   }
   .history:hover {
     background: rgba(0, 0, 200, .1);
@@ -178,7 +181,7 @@
   }
 
   </style>
-  <link rel="stylesheet" href="./js/plugin/pagination/pagination.css">;
+  <link rel="stylesheet" href="./plugin/pagination/pagination.css">;
 </head>
 <body>
 <div class="container">
@@ -192,9 +195,10 @@
     >
     <button type="submit" style="color:skyblue">搜索</button>
     
-      <div id='history-list' hidden></div>
+      <div id='history-list'hidden >
      
-     <div id='remove-all'hidden>清空历史记录</div>
+      </div>
+      <div id='remove-all' hidden>清空历史记录</div>
 
     
   </form>

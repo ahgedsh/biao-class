@@ -178,6 +178,7 @@ var el
    ;
 function init(config){
     el=document.querySelector(config.el);
+   
     if(!config.el || !el)
     throw'err';
    on_click=config.on_click;
@@ -189,8 +190,7 @@ function init(config){
 
 }
 function is_no_list(){
-    if(list=[])
-    return false;
+   console.log(1);
 }
 function hide(){
     el.hidden=true;
@@ -205,6 +205,7 @@ function is_visible(){
 
 function render(){
     el.innerHTML='';
+    
     list.forEach(function(keyword){
         var el_keyword=document.createElement('div');
         
@@ -214,7 +215,9 @@ function render(){
                 <span class="delete">删除</span>
             </div>
             `;
-
+         
+       
+            
             el_keyword.classList.add('history');
             el.appendChild(el_keyword);
             el_keyword.addEventListener('click',function(e){

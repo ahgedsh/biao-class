@@ -1,0 +1,14 @@
+.nav {
+    color: #fff;
+    background: rgba(0,0,0,0.9); 
+    
+}
+.nav a{
+    padding: 10px 0;
+    margin: 0 150px;
+    color: #fff;
+   
+}
+.nav a:hover{
+    color: rgb(246, 10, 10);
+}

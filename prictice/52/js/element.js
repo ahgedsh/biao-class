@@ -25,7 +25,7 @@ var form=document.getElementById('search-form')
       
       <div class='info'>
       <div class='username'>${user.login}</div>
-      <div><a href="${user.url}">${user.url}</a></div>
+      <div class='user-url'><a href="${user.url}">${user.url}</a></div>
       </div>
       </div>`;
       down = `<div>共有${data.total_count}条结果</div>`;

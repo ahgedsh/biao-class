@@ -1,0 +1,107 @@
+
+.nav,
+.first-screen button,
+.footer{
+   background: rgba(0,0,0,0.9);
+}
+
+.first-screen .title {
+    padding: 50px;
+}
+
+.first-screen   h1 {
+    font-size: 3rem;
+}
+
+.first-screen button {
+    padding: 10px;
+    border: rgba(0,0,0,0.7);
+    margin: 20px;
+}
+
+.first-screen button a{
+    color: #fff;
+}
+
+.main .first img {
+    max-height: 450px;
+    padding-left: 100px;
+  
+}
+
+.main .second {
+   padding: 100px;
+   font-size: 30px;
+}
+
+.container {
+    border:2px solid rgba(0,0,0,0.9);
+
+}
+
+.content .mypicture,
+.content .thank {
+    
+    font-size: 25px;
+}
+.content .mypicture,
+.content .thank{
+    padding: 63px;
+}
+
+
+
+
+.introduce >* {
+    padding: 50px 20px;
+  
+} 
+.introduce div{
+    padding: 15px 0;
+   
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif; 
+   
+}
+ .nav a:hover,
+.first-screen .title a:hover
+ {
+    color: rgb(246, 10, 10);
+}
+
+
+.first-screen .title  a:hover{
+    font-weight: bold;
+    color: rgb(246, 10, 10);
+    
+  
+}
+
+
+/* .first-screen button:hover {
+    background: #fff;
+    
+    
+} */
+
+
+                                                                                                                          
+@media(max-width: 400px){
+    .main  .second {
+        padding: 10px;
+    }
+    .main .first img {
+        padding-left: 0;
+    }
+    
+    .main .second,
+    .content .mypicture,
+    .content .thank{
+        text-align: center;
+    }
+
+   
+}

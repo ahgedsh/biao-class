@@ -23,8 +23,8 @@ function  detect_click_submit(){//点击提交事件
    history.add(keyword);
    //el.show_loading();
     
-    search.search(on_search_succeed);
-    el.render();
+    search.search(keyword);
+    //el.render(data);
     //el.hide_loading();
     pagination.show_pagination();
    
@@ -32,20 +32,20 @@ function  detect_click_submit(){//点击提交事件
     
   })
 }
-function on_search_succeed(data) {//搜索成功的时候
+// function on_search_succeed(data) {//搜索成功的时候
 
-  /*拿到搜索结果总数*/
-  share.set_amount(data.total_count);
-  share.set_user_list(data.items);
-  pagination.set_amount_and_limit(share.get_amount(), share.get_limit());
-  //pagination.show();
+//   /*拿到搜索结果总数*/
+//   share.set_amount(data.total_count);
+//   share.set_user_list(data.items);
+//   pagination.set_amount_and_limit(share.get_amount(), share.get_limit());
+//   //pagination.show();
 
-  /*清空上次搜索结果的HTML*/
-  el.reset_user_list();
+//   /*清空上次搜索结果的HTML*/
+//   el.reset_user_list();
 
-  /*既然有了数据，不就可以渲染用户列表和页码组件了吗？*/
-  el.render();
-}
+//   /*既然有了数据，不就可以渲染用户列表和页码组件了吗？*/
+//   el.render();
+// }
 
 function detect_click_top(){
   el.top.addEventListener('click',function(){
@@ -56,9 +56,8 @@ function detect_click_top(){
 function detect_click_input(){//点击input历史记录隐藏
   el.input.addEventListener('click',function(){
    history.show();
-   
-   
    el.show_remove_all();
+  
    
    
     
@@ -74,15 +73,18 @@ function init_plugin(){//组件接口
     
     el:'#pagination',
     limit:share.get_limit(),
-   // amount:share.get_amount(),
-    on_page_change: function (page) {
-      share.set_current_page(page);
-      search.search(on_history_delete);
-
+    amount:share.get_amount(),
+    on_page_change:on_change_page,
     
-      
-    }
   })
+
+}
+function on_change_page(page){
+  if(page==share.get_current_page()){
+      return;
+  }
+  share.set_current_page(page);
+  search.search();
 
 }
 

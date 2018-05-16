@@ -1,0 +1,31 @@
+.about .main {
+    font-size: 60px;
+    padding: 50px;
+}
+.about .pictur {
+    margin-top: 60px;
+}
+.about .main .one {
+    margin-bottom: 50px;
+}
+
+.about .one,
+.about  .two,
+.about .three {
+ padding-top: 50px;
+}
+
+.about .first,
+.about .second,
+.about .third {
+  padding: 50px;
+  font-size: 20px;
+  border-left: none;
+  border-right: none;
+}
+
+@media (max-width:400px){
+    .pictur {
+        margin: 0 50px;
+    }
+}
