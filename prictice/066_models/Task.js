@@ -1,0 +1,28 @@
+class Task extends Base{
+    constructor(max_id,list){
+
+        super(max_id,list)
+    }
+    
+
+    add(){
+        console.log('my add');
+        this.$add();
+    }
+
+    remove(){
+        console.log('my remove');
+        this.$remove();
+    }
+
+    updata(){
+        console.log('my updata');
+        this.$updata();
+    }
+
+    read(){
+        console.log('my read');
+        this.$read();
+    }
+
+}

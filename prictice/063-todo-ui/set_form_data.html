@@ -1,0 +1,76 @@
+<meta charset="utf-8">
+<form id="todo-form" action="http://baidu.com">
+  <input name="title" type="text"><br>
+  <input name="completed" type="checkbox"> 完成<br>
+  <textarea name="desc"></textarea>
+  <button type="submit">添加任务</button>
+</form>
+
+<script>
+   ;(function(){
+       'use strict';
+
+    //   function set_form_data(form_selete,data){
+    //       var form=document.querySelector(form_selete);
+    //       for(var key in data){
+    //           var value=data[key];
+              
+    //           var input=form.querySelector(`[name=${key}`);
+    //           console.log(input);
+    //           if(!input)
+    //           continue;
+    //           var data_type=typeof value;
+    //           switch(data_type){
+    //               case'string': 
+    //               case 'number': 
+    //               input.value=value;
+    //               break;
+    //               case'boolean':
+    //               input.checked=value;
+    //               break;
+    //           }
+    //       }
+    //   }
+    //  var row={
+    //      title:'吃饭',
+    //      completed:true,
+    //      desc:'aasdfesf',
+        
+    //  };
+    //  set_form_data('#todo-form',row);
+      
+
+
+   function set_form_data(form_selete,data){
+       var form=document.querySelector(form_selete);
+       for(var key in data){
+           var value=data[key];
+           var input=form.querySelector(`[name=${key}`);
+
+           if(!input){
+               continue;
+           }
+           var data_type=typeof value;
+           switch(data_type){
+               case'number': 
+               case'string': 
+               input.value=value;
+               break;
+               case'boolean': 
+               input.checked=value;
+               break;
+
+           }
+       }
+   }
+   var row={
+       title:'qwe',
+       completed:true,
+       desc:'asdf',
+   }
+   set_form_data('#todo-form',row);
+   })();
+
+
+
+</script>

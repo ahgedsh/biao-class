@@ -1,0 +1,141 @@
+<script>
+   function TodoModel(list,max_id){
+       this.max_id=max_id || 1;
+       this.list=list || [];
+   }
+
+   TodoModel.prototype.add=add;
+   TodoModel.prototype.remove=remove;
+   TodoModel.prototype.read=read;
+   TodoModel.prototype.updata=updata;
+
+   var todo_list = [
+  { // 0
+    id: 100,
+    name: '买菜',
+    completed: false,
+  },
+  { // 1
+    id: 101,
+    name: '洗菜',
+    remind_at: '2020-10-01 20:20:02',
+    completed: false,
+  },
+];
+
+
+// function add(row){
+//     this.max_id=this.max_id+1;
+//     row.id=this.max_id;
+//     this.list.push(row);
+
+// }
+
+
+
+// function remove(id){
+//   var index=find_index_by_id(this.list,id);
+//   if(index<0){
+//       return;
+
+//   }else{
+//       this.list.splice(index,1);
+//   }
+// }
+
+// function updata(id,new_row){
+//     var index=find_index_by_id(this.list,id);
+//     if(index<0)
+//     return;
+//     var old_row=this.list[index];
+//     this.list[index]=Object.assign({},old_row,new_row);
+// }
+
+// function read(id){
+//     if(id)
+//     return find_by_id(this.list,id);
+//     return this.list;
+// }
+
+// function find_index_by_id(arr,id){
+//     return arr.findIndex(function(row){
+//       return  row.id===id;
+//     });
+// }
+
+// function find_by_id(arr,id){
+//     return arr.find(function(row){
+//         return row.id===id;
+//     })
+// }
+
+// var todo=new TodoModel(todo_list,101)
+
+
+// //todo.remove(100);
+// todo.updata(100,{
+//     name:'lsa',
+//     completed:true,
+    
+// })
+ 
+
+ function find_by_id(arr,id){
+    return arr.find(function(row){
+        return row.id==id;
+
+     })
+ }
+
+ function find_index_by_id(arr,id){
+     return arr.findIndex(function(row){
+         return row.id==id
+     })
+ }
+
+
+function add(row){
+    this.max_id=this.max_id+1;
+    row.id=this.max_id;
+    this.list.push(row);
+}
+
+function read(id){
+    if(id)
+    return find_by_id(this.list,id);
+    return this.list;
+}
+function remove(id){
+    var index=find_index_by_id(this.list,id)
+    if(index<0)
+    return;
+    this.list.splice(index,1);
+
+}
+
+function updata(id,new_row){
+    var index=find_index_by_id(this.list,id);
+    if(index<0)
+    return;
+    var old_row=this.list[index];
+    this.list[index]=Object.assign({},old_row,new_row);
+    
+}
+
+var todo=new TodoModel(todo_list,101);
+
+// todo.add({
+//     name:'wdd',
+//     completed:true,
+
+// })
+
+//todo.remove(100);
+
+todo.updata(100,{
+    name:'wer',
+    completed:false,
+})
+console.log(todo.read());
+
+</script>

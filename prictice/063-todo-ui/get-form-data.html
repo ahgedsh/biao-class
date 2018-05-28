@@ -1,0 +1,63 @@
+<meta charset="utf-8">
+
+<form id='data-form'>
+    <input type="text" name='name' value='yo'><br>
+    <label>
+        <input  name="completed" type="checkbox">完成
+    </label><br>
+   <input name='aa' value="asdf">
+    <button type="submit">添加任务</button>
+</form>
+
+<script>
+    ;(function(){
+        'use strict';
+        var row={};
+
+        // var name=document.querySelector('[name=name]');
+        // var completed=document.querySelector('[name=completed]');
+        // row.name=name.value;
+        // row.completed=completed.value;
+        // console.log(row.name);
+        // console.log(row.completed);
+    function get_data_form(form_selete){
+        var data={};
+        var form=document.querySelector(form_selete);
+        var list=form.querySelectorAll('[name]');
+        
+
+        list.forEach(function(input){
+            switch(input.nodeName){
+                case'INPUT':
+                switch(input.type){
+                    case'text': 
+                    case'number':
+                    case'password': 
+                    case'search':
+                    data[input.name]=input.value;
+                    break;
+                    case'radio': 
+                    case'checkbox':
+                    data[input.name]=input.checked;
+                    break;
+                }
+                break;
+                case'TEXTAREA':
+                data[input.name]=input.value;
+                break;
+            }
+
+
+
+        });
+        return data;
+    }
+
+    row=get_data_form('#data-form');
+    console.log(row);
+    })();
+
+
+
+
+</script>
