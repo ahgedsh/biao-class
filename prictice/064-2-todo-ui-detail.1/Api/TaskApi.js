@@ -10,7 +10,7 @@ TaskApi.prototype=Object.create(BaseApi.prototype);
 TaskApi.prototype.constructor=TaskApi;
 TaskApi.prototype.add=add;
 TaskApi.prototype.remove=remove;
-TaskApi.prototype.updata=updata;
+TaskApi.prototype.update=update;
 TaskApi.prototype.read=read;
 TaskApi.prototype.read_by_cat=read_by_cat;
 TaskApi.prototype.remove_by_cat=remove_by_cat;
@@ -24,7 +24,7 @@ function add(row){
   }
 
   row.cat_id=parseInt(row.cat_id);
-  console.log(row.cat_id);
+  //console.log(row.cat_id);
 
  return  this.$add(row);
 }
@@ -34,7 +34,7 @@ function remove(id){
   return this.$remove(id);
 }
 
-function updata(id,new_row){
+function update(id,new_row){
   return this.$updata(id,new_row);
 }
 

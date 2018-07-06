@@ -1,0 +1,75 @@
+<link rel='stylesheet' href="index.css">
+
+
+ <div id="root">
+    <div class="container">
+        <div class="row">
+            <div class="col sidebar">
+                
+            <div class=" row sidebar-item"
+                    v-if='row.title' 
+                    @click='current=row'
+                    v-for='(row,index) in memoList'>
+                <span class="title col">{{row.title}}</span>
+                <span class="col tool-set">
+                    <span @click='remove(index)'>删除</span>
+                </span>
+            </div>
+                <button class="block" @click='create()'>+</button>
+            </div>
+            <div class="col main">
+                <div v-if='current' class="editor">
+                    <input v-model='current.title' type="text" placeholder="标题">
+                    <textarea  v-model='current.content' placeholder="内容"></textarea>
+                    <button @click='submit(current)'>提交</button>
+                    <button @click='current=null'>关闭</button>
+
+
+                </div>
+                <div v-else class="holder">
+                    暂时没有内容
+                    <button @click='create()'>添加</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 
+
+<!-- <div id='root'>
+
+    <div class="container">
+        <div class="row">
+            <div class="col sidebar">
+                <div class=" row sidebar-item" v-for='(row,i) in memoList' @click='current=row' v-if='row.title'>
+                    <span class='col title '>{{row.title}}</span>
+
+                    <span class="col tool-set">
+                        <span @click='remove(index)'>删除</span>
+                    </span>
+                </div>
+                <button class="block" @click='create()'>新增</button>
+            </div>
+            <div class="col main">
+                <div v-if='current' class="editor">
+                    <input type="text" placeholder="标题" v-model='current.title'>
+                    <textarea placeholder="内容" v-model='current.content'></textarea>
+                    <button @click='submit(current)'>提交</button>
+                    <button @click='current=null'>关闭</button>
+                </div>
+                <div v-else class="holder">
+                    没有内容
+                    <button @click='create()'>添加</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div> -->
+
+
+
+
+
+<script src="./node_modules/vue/dist/vue.js"></script>
+<script src="./ajax.js"></script>
+<script src='./index.js'></script>

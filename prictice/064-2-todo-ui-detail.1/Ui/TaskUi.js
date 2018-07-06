@@ -107,7 +107,7 @@ function detect_add(){
         //console.log(row);
 
         if(row.id){
-            me._api.updata(row.id,row);
+            me._api.update(row.id,row);
         }else{
             me._api.add(row);
         }

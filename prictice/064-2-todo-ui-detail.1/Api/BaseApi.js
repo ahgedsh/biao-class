@@ -56,5 +56,6 @@ function find_id_by_index(arr,id){
 function find_by_id(arr,id){
   return arr.find(function(row){
     return row.id==id;
-  })
+  });
 }
+
