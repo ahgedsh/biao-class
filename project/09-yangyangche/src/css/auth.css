@@ -1,0 +1,32 @@
+.error-list{
+    margin:10px 0;
+    padding: 12px;
+    background:pink;
+   
+  }
+  .input-contail{
+    padding: 10px 0;
+  }
+  h1{
+    font-size: 22px;
+
+  }
+  
+
+  .main-form{
+    background: #fff;
+   
+    width: 320px;
+    padding:20px;
+    
+  }
+  .main-form input,
+  .main-form button{
+    width: 100%;
+    padding:10px;
+  }
+
+  .main-form button{
+    border:1px solid #fd521d;
+    
+  }

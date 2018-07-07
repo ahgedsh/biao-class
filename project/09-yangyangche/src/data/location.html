@@ -1,0 +1,43 @@
+<script src="../../node_modules/axios/dist/axios.js"></script>
+<script src="./api.js"></script>
+
+<script>
+
+
+    let model = {
+        name: 'location',
+        structure: {
+            name: {
+                type: 'string',
+                nullable: true,
+            },
+            type: {
+                type: 'string',
+                nullable: true,
+            },
+            parent_id: {
+                type: 'integer',
+                positive: true,
+                nullable: true,
+
+            },
+
+        },
+    };
+
+    // api('MODEL/CREATE',model);
+    // api('MODEL/DELETE',{name:'location'});
+     api('location/read');
+    // api('location/seed', { force: true, type:'location'})
+    // api('location/seed',{type:'location'})
+    // api('location/create_many',{data:
+
+    // });
+//     api('location/read', {
+//     where : {
+//       and : {
+//         type: 'state'
+//       },
+//     },
+//   });
+</script>

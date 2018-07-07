@@ -1,0 +1,94 @@
+<script src="../../node_modules/axios/dist/axios.js"></script>
+<script src='./api.js'></script>
+<script>
+    let vehicle={
+        name:'vehicle',
+        structure:{
+            price:{
+                type:'float',
+                nullable:true,
+            },
+            title:{
+                type:'string',
+                nullable:true,
+            },
+           publish_reason:{
+                type:'string',
+                nullable:true,
+            },
+            consumed_distance:{
+                type:'float',
+                nullable:true,
+            },
+           local:{
+                type:'integer',
+                nullable:true,
+            },
+            exchange_times:{
+                type:'integer',
+                nullable:true,
+            },
+            birth_day:{
+                type:'dateTime',
+                nullable:true,
+            },
+            deadline:{
+                type:'dateTime',
+                nullable:true,
+            },
+            condition:{
+                type:'float',
+                nullable:true,
+                positive:true,
+            },
+            description:{
+                type:'text',
+                nullable:true,
+            },
+            on_sale:{
+                type:'integer',
+                nullable:true,
+            },
+            publisher_id:{
+                type:'integer',
+                nullable:true,
+                positive:true,
+            },
+            brand_id          : { // 品牌
+        type     : 'integer',
+        nullable : true,
+        positive : true,
+      },
+      model_id          : { // 型号
+        type     : 'integer',
+        nullable : true,
+        positive : true,
+      },
+      design_id         : { // 车型
+        type     : 'integer',
+        nullable : true,
+        positive : true,
+      },
+      location_id       : { // 所在地
+        type     : 'integer',
+        nullable : true,
+        positive : true,
+      },
+    },
+  };
+
+ // api('MODEL/READ');
+//  api('MODEL/CREATE_PROPERTY', {
+//     model     : 'vehicle',
+//     property  : 'preview',
+//     structure : {
+//       type : 'json',
+//     },
+//   });
+
+    
+
+
+
+
+</script>
