@@ -7,7 +7,7 @@
              </div>
              <div class='col-lg-9'>
                  <div class='content card'>
-                     <h2>车辆列表</h2>
+                     <h2>品牌列表</h2>
                      <div class='tool-bar'>
               <button @click='show_form=!show_form'>创建品牌</button>
             </div>

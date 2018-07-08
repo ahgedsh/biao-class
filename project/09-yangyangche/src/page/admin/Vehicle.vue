@@ -118,20 +118,24 @@
             </div>
             <div class="input-control">
               <label>发布人</label>
-              <Dropdown :list='user_list' displayKey='username' />
+              <Dropdown :list='user_list' displayKey='username' :onSelect='set_publisher_id' />
             </div>
             <div class="input-control">
               <label>品牌</label>
-              <Dropdown :list='brand_list' />
+              <Dropdown :list='brand_list' :onSelect='set_brand_id'/>
             </div>
             <div class="input-control">
               <label>型号</label>
-              <Dropdown :list='model_list' />
+              <Dropdown :list='model_list' :onSelect='set_model_id' />
             </div>
             <div class="input-control">
               <label>设计</label>
-              <Dropdown :list='design_list' />
+              <Dropdown :list='design_list' :onSelect='set_design_id' />
             </div>
+            <div class="input-control">
+                <label>所属位置</label>
+                <Location :onSelect="set_location_id"/>
+              </div>
             <div class="input-control">
               <label class="dib">促销</label>
               <input class="dib" type="checkbox" v-model="current.on_sale">
@@ -153,7 +157,7 @@
               <thead>
                 <th>标题</th>
                 <th>价格</th>
-
+                <th>design</th>
                 <th>当前里程</th>
 
                 <th>预期出售时间</th>
@@ -168,7 +172,7 @@
                 <tr :key='row.title' v-for="row in list">
                   <td>{{row.title}}</td>
                   <td>{{row.price}}</td>
-
+                  <td>{{row.design_id || '-'}}</td>
                   <td>{{row.consumed_distance || '-'}}</td>
 
                   <td>{{row.deadline || '-'}}</td>
@@ -194,14 +198,17 @@
 import "../../css/admin.css";
 
 import api from "../../lib/api";
+
 import AdminPage from "../../mixin/AdminPage.vue";
 
+import Location  from "../../components/Location";
 import Dropdown from "../../components/Dropdown.vue";
+
 import validator from "../../directive/validator";
 
 export default {
   directives: { validator },
-  components: { Dropdown },
+  components: { Dropdown,Location},
 
   mounted() {
     this.list_user();
@@ -250,6 +257,22 @@ export default {
         this.brand_list = r.data;
       });
     },
+     set_brand_id (row) {
+        this.$set(this.current, 'brand_id', row.id);
+      },
+      set_design_id (row) {
+        this.$set(this.current, 'design_id', row.id);
+        console.log(this.current)
+      },
+      set_publisher_id (row) {
+        this.$set(this.current, 'publisher_id', row.id);
+      },
+      set_model_id (row) {
+        this.$set(this.current, 'model_id', row.id);
+      },
+      set_location_id (row) {
+        this.$set(this.current, 'location_id', row.id);
+      },
 
   },
   mixins: [AdminPage]

@@ -1,5 +1,5 @@
 <script>
-
+import validator   from '../directive/validator';
 import Nav from "../components/Nav";
 import AdminNav from "../components/AdminNav";
 import Pagination from '../components/Pagination.vue';
@@ -7,26 +7,38 @@ import Pagination from '../components/Pagination.vue';
 import api from "../lib/api";
 
 export default {
+    directives : { validator },
     components:{AdminNav,Nav,Pagination},
     mounted() {
+
+      if(!this.model){
+        throw new Error('请在data中配置当前页model');
+      }
     this.read();
 
 
   },
   data() {
     return {
+      //模型配置
         model:null,
-      last_page:0,
+     
+      edit_mode: false,
       disabled: "disabled",
+      //数据相关
       current: {},
       list: [],
-      edit_mode: false,
+      
+      //界面相关
       show_form: false,
+      //搜索相关
       keyword: "",
       searchable:[],
+      //翻页相关
       current_page:1,
       total:0,
       limit: 3,
+      last_page:0,
     };
   },
   methods: {
@@ -39,9 +51,10 @@ export default {
       this.read(page);
     },
     cou(e) {
+      console.log(this.current)
       e.preventDefault();
       let action = this.current.id ? "update" : "create";
-      console.log(this.current)
+   
       api(`${this.model}/${action}`, this.current)
       .then(r => {
         this.current = {};
@@ -60,6 +73,7 @@ export default {
         this.list = r.data;
         this.last_page=r.last_page;
         this.current_page=r.current_page;
+        console.log(this.list)
       });
     },
 
@@ -97,6 +111,9 @@ export default {
       .then(r => {
         this.list = r.data;
       });
+    },
+    is_update(){
+      return !!this.current.id;
     }
   },
     

@@ -78,9 +78,9 @@
 
   export default {
       directives: { validator },
-    mounted () {
-      this.read_brand();
-    },
+    // mounted () {
+    //   this.read_brand();
+    // },
     components : { Dropdown },
     data () {
       return {
@@ -93,12 +93,13 @@
     },
 
     methods : {
-      read_brand () {
-        api('brand/read')
-          .then(r => {
-            this.brand_list = r.data;
-          });
-      },
+    //   read_brand () {
+    //     api('/read')
+    //       .then(r => {
+    //         this.brand_list = r.data;
+    //         console.log(r.data);
+    //       });
+    //   },
       set_brand_id (row) {
         this.$set(this.current, 'brand_id', row.id);
       },

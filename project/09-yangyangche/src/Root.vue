@@ -7,13 +7,14 @@
    ]" :onSelect="yo" />  
   </div> -->
   <div>
-  <!-- <router-view></router-view>  -->
-    <Location :onSelect="tmp" />
+     <router-view></router-view>   
+     <!-- <Location :onSelect="tmp" />  -->
    
   </div>
 </template>
 
 <script>
+/* eslint-disable */
 import Home from './page/Home';
 import Detail from './page/Detail';
 import Login from './page/Login';

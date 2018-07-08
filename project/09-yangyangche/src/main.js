@@ -18,6 +18,8 @@ import Vehicle from './page/admin/Vehicle';
 import Brand from './page/admin/Brand';
 import Design from './page/admin/Design';
 import Model from './page/admin/Model';
+import Location from './components/Location.vue';
+
 
 
 
@@ -44,6 +46,7 @@ const router= new Router({
        {path:'brand',component:Brand},
        {path:'design',component:Design},
        {path:'model',component:Model},
+       {path:'location',component:Location},
 
 
 
