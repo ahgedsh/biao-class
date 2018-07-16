@@ -3,40 +3,37 @@
   <div class='detail'>
     <Nav/>
       <div class='mian'>
+       
         <div class='container'>
-          <SearchBar />
+          
             
           
           <div class='col-lg-6 '>
             <div class='card'>
-              <div class='title'><h2>大众-速腾 2009款 1.7L 自动时尚型</h2></div>
+              <div class='title'><h2>{{detail.title}}</h2></div>
               <div class='thum'>
-                <img src='../assets/cars2.jpg'>
+                
+                  <img :src="detail.preview && detail.preview[selected_preview] && detail.preview[selected_preview].url ? detail.preview[selected_preview].url :
+            'https://image1.guazistatic.com/qn180618155102242081e88c459a11926744030df0971b.jpg?imageView2/1/w/287/h/192/q/88'"
+                 alt=""> 
               </div>
               <div class='minicart'>
-                <div class='col-lg-3'>
-                <img src='../assets/cars2.jpg'>                  
+                <div class='col-lg-3' @click='selected_preview=i' v-for='(pre,i) in detail.preview' :key='pre.id'>
+                  <img :src="pre.url" alt='pre.name'> 
+                  
                 </div>
-                <div class='col-lg-3'>
-                <img src='../assets/cars2.jpg'>                  
-                </div>
-                <div class='col-lg-3'>
-                <img src='../assets/cars2.jpg'>                  
-                </div>
-                <div class='col-lg-3'>
-                <img src='../assets/cars2.jpg'>                  
-                </div>
+                
               </div>
             </div>
           
           </div>
           <div class='col-lg-6 '>
             <div class='bigdesc'>
-              <div class='title'> <h2>大众-速腾 2009款 1.7L 自动时尚型</h2></div>
+              <div class='title'> <h2>{{detail.title}}</h2></div>
               <div class='price-area'>
                 <div class='price'> 
                   <span class='thisprice'>卖家报价 :</span>
-                  <span class="oldprice">￥4.56万</span>
+                  <span class="oldprice">￥{{detail.price}}万</span>
                   <span class='newprice'>新车含税15.1万</span>
                   <span class='lowprice'>降价提醒</span>
                 </div>
@@ -65,11 +62,11 @@
               </div>  
               <div class='row dib'>
                 <span class='col time' >
-                  <div>2010九月</div>
+                  <div>{{detail.birth_day | only_day}}</div>
                   <div class='one'>上牌时间</div>
                 </span>
                 <span class='col mile'>
-                  <div>9.4万公里</div>
+                  <div>{{detail.consumed_distance || 0}}万公里</div>
                   <div class='two'>公里数</div>
                 </span>
                 <span class='col search' >
@@ -104,8 +101,8 @@
               </div>
               <div class='someelse'>
                 <span>车源号：xa-250779</span>
-                <span>收藏</span>
-                <span>发送到手机</span>
+                <span><i class="far fa-heart"></i>收藏</span>
+                <span><i class="fas fa-mobile-alt"></i>发送到手机</span>
 
               </div>
 
@@ -250,6 +247,7 @@
 
         
       </div>
+      <Footer />
   </div>
 </template>
 
@@ -257,8 +255,37 @@
 
 import SearchBar from '../components/SearchBar.vue';
 import Nav  from '../components/Nav.vue';
+import Footer  from '../components/Footer.vue';
+
+import api from '../lib/api';
+
+
 export default {
-   components:{Nav,SearchBar}
+   components:{Nav,SearchBar,Footer},
+
+   mounted(){
+     let id=this.get_id();
+     this.find(id);
+   },
+   data(){
+     return {
+       selected_preview:0,
+       detail:{},
+     };
+   },
+   methods:{
+     find(id){
+       api('vehicle/find',{id})
+       .then(r=>{
+         this.detail=r.data;
+         console.log(this.detail);
+       });
+     },
+     get_id(id){
+     
+       return this.$route.params.id;
+     }
+   }
     
 }; 
 </script>
@@ -429,13 +456,15 @@ padding:20px  10px;
   padding-top: 7px;
 }
 
-.someelse :before{
+.someelse > span:before{
   content:'|';
+  padding-right: 40px;
+  color:rgba(0,0,0,.3);
 
 }
 
-.someelse :first-child{
-  content:0;
+.someelse > span:first-child::before {
+  content:'';
 }
 .someelse >*{
   font-size:15px;
@@ -449,6 +478,8 @@ padding:20px  10px;
 
 .minicart {
   padding:10px;
+  overflow: auto;
+    white-space: nowrap;
 }
 .minicart >*{
   padding: 10px;
@@ -505,6 +536,10 @@ table{
 table td{
   border-bottom:1px dashed rgba(0,0,0,.3);
   padding-left:20px;
+}
+.minipicter,
+.picter{
+  margin: 0 -10px;
 }
 
 </style>

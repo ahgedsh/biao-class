@@ -1,4 +1,5 @@
 <script>
+/* eslint-disable */
 import validator   from '../directive/validator';
 import Nav from "../components/Nav";
 import AdminNav from "../components/AdminNav";
@@ -54,6 +55,7 @@ export default {
       console.log(this.current)
       e.preventDefault();
       let action = this.current.id ? "update" : "create";
+      console.log(this.current.id)
    
       api(`${this.model}/${action}`, this.current)
       .then(r => {

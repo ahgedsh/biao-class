@@ -1,0 +1,47 @@
+<script src="../../node_modules/axios/dist/axios.js"></script>
+<script src="./api.js"></script>
+<script>
+  let model = {
+    name: 'report',
+    structure: {
+      absorber_f_l: {display_name: '减震器左前', type: 'boolean', nullable: true},
+      absorber_f_r: { display_name: '减震器右前', type: 'boolean', nullable: true },
+      absorber_b_l: { display_name: '减震器左后', type: 'boolean', nullable: true },
+      absorber_b_r: { display_name: '减震器右后', type: 'boolean', nullable: true },
+      bridge_v_f_l: { display_name: '左前纵梁', type: 'boolean', nullable: true },
+      bridge_v_f_r: { display_name: '右前纵梁', type: 'boolean', nullable: true },
+      bridge_v_b_l: { display_name: '左后纵梁', type: 'boolean', nullable: true },
+      bridge_v_b_r: { display_name: '右后纵梁', type: 'boolean', nullable: true },
+      bridge_s_t_r: { display_name: '右侧顶边梁', type: 'boolean', nullable: true },
+      bridge_s_t_l: { display_name: '左侧顶边梁', type: 'boolean', nullable: true },
+      trunk_floor: { display_name: '后备箱底板', type: 'boolean', nullable: true },
+      firewall: { display_name: '防火墙', type: 'boolean', nullable: true },
+      pillar_r_a: { display_name: '右A柱', type: 'boolean', nullable: true },
+      pillar_r_b: { display_name: '右B柱', type: 'boolean', nullable: true },
+      pillar_r_c: { display_name: '右C柱', type: 'boolean', nullable: true },
+      pillar_r_d: { display_name: '右D柱', type: 'boolean', nullable: true },
+      pillar_r_a: { display_name: '右A柱', type: 'boolean', nullable: true },
+      pillar_l_b: { display_name: '右B柱', type: 'boolean', nullable: true },
+      pillar_l_c: { display_name: '右C柱', type: 'boolean', nullable: true },
+      pillar_l_d: { display_name: '右D柱', type: 'boolean', nullable: true },
+
+      vehicle_id: { type: 'integer', nullable: true,  positive : true,},
+    },
+  };
+
+  // api('MODEL/CREATE_PROPERTY', {
+  //   model     : 'report',
+  //   property  : 'vehicle_id',
+  //   structure : {
+  //     type     : 'integer',
+  //     positive : true,
+  //     nullable : true,
+  //   },
+  // });
+
+  // api('MODEL/CREATE', model);
+
+   //api('MODEL/FIND', { name : 'report' });
+
+  // api('MODEL/DELETE', {name: 'report'});
+</script>

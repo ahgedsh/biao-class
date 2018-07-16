@@ -6,9 +6,10 @@
        <router-link class='nav-item ' to='/admin/design'>设计管理</router-link>
        <router-link class='nav-item ' to='/admin/model'>车型管理</router-link>
        <router-link class='nav-item ' to='/admin/location'>地址管理</router-link>
+       <router-link class='nav-item ' to='/admin/report'>质检管理</router-link>
        
         
-        <a href="#" class='nav-item '>质检管理</a>
+        
     </div>
 </template>
 

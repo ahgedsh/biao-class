@@ -204,6 +204,33 @@ const valid = {
     return true;
   },
 
+//验证电话号码
+  cellphone(val,lang){
+    const lang_conf={
+      zh:'不合法的手机号',
+      en:'InValid phone number',
+
+    };
+    if(!this.numeric(val,lang) || !this.length(val,lang,11))
+    throw lang_conf[lang];
+
+    return true;
+  },
+  
+//验证号码的长度，需等于11位
+  length(val,lang,len){
+    const lang_conf={
+      zh:'不合法的长度，长度需等于'+len+'位',
+      en:'Invalid field length, length should equals to ' +len,
+    };
+
+    val=val.toString();
+    if(val.length==len)
+    return true;
+
+    throw lang_conf[lang];
+  },
+
   /**
    * 验证用户名格式
    * @param val

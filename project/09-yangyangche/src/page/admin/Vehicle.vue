@@ -56,17 +56,7 @@
 
             </div>
 
-            <!-- <div class="input-control">
-              <label >封面地址</label>
-              <div style='margin-bottom:5px;'>
-                <div :key='(p,i)' v-for='(p,i) in current.preview' class='input-group-3'>
-                  <input type="text" placeholder="部位" v-model="p.name">
-                  <input type="url" placeholder="图片地址" v-model='p.url'>
-                  <button @click='current.preview.splice(i,1)' type='button'>-</button>
-                </div>
-              </div>
-              <button @click='current.preview.push({})' type='button'>+</button>
-            </div> -->
+            
             <div class="input-control">
                 <label>封面地址</label>
                 <div style="margin-bottom: 5px;">
@@ -93,11 +83,11 @@
             </div>
             <div class="input-control">
               <label>第一次上牌时间</label>
-              <input type="datetime-local" v-model="current.birthday">
+              <input type="date" v-model="current.birth_day">
             </div>
             <div class="input-control">
               <label>预期出售时间</label>
-              <input type="datetime-local" v-model="current.deadline">
+              <input type="date" v-model="current.deadline">
             </div>
             <div class="input-control">
               <label>车况</label>
@@ -136,14 +126,17 @@
                 <label>所属位置</label>
                 <Location :onSelect="set_location_id"/>
               </div>
-            <div class="input-control">
-              <label class="dib">促销</label>
-              <input class="dib" type="checkbox" v-model="current.on_sale">
+            
+              <label class="dib col-lg-1 ">促销</label>
+                <div class='col-lg-1'> <input class="dib " type="checkbox" v-model="current.on_sale">
+              </div>
+           
+              
+              <label class="dib col-lg-1">本地车牌 </label>
+                <div class='col-lg-1'> <input class="dib " type="checkbox" v-model="current.local">
+              </div>
 
-              <label class="dib">本地车牌 </label>
-              <input class="dib" type="checkbox" v-model="current.local">
-
-            </div>
+            
             <div class="input-control">
               <div class='btn-group'>
                 <button class="btn-primary" type="submit">提交</button>
@@ -157,7 +150,7 @@
               <thead>
                 <th>标题</th>
                 <th>价格</th>
-                <th>design</th>
+                
                 <th>当前里程</th>
 
                 <th>预期出售时间</th>
@@ -172,7 +165,7 @@
                 <tr :key='row.title' v-for="row in list">
                   <td>{{row.title}}</td>
                   <td>{{row.price}}</td>
-                  <td>{{row.design_id || '-'}}</td>
+                  
                   <td>{{row.consumed_distance || '-'}}</td>
 
                   <td>{{row.deadline || '-'}}</td>
@@ -195,6 +188,7 @@
   </div>
 </template>
 <script>
+/* eslint-disable */
 import "../../css/admin.css";
 
 import api from "../../lib/api";
@@ -287,10 +281,7 @@ search {
   padding-bottom: 5px;
   padding-top: 10px;
 }
-.dib {
-  display: inline-block;
-  width: 3%;
-}
+
 input {
   outline: 0;
   width: 100%;

@@ -7,8 +7,9 @@
    ]" :onSelect="yo" />  
   </div> -->
   <div>
-     <router-view></router-view>   
+       <router-view></router-view>    
      <!-- <Location :onSelect="tmp" />  -->
+     <!-- <Footer /> -->
    
   </div>
 </template>
@@ -21,10 +22,12 @@ import Login from './page/Login';
 import Signup from './page/Signup';
 import Me from './page/settings/Me';
 import User from './page/admin/User';
+import Report from './page/admin/Report';
 import Vehicle from './page/admin/Vehicle';
-
-import SearchResult from './page/SearchResult.vue';
+import Search from './page/Search.vue';
 import Location from './components/Location';
+import Footer from './components/Footer';
+
 
 
 
@@ -49,9 +52,12 @@ export default {
   Me,
   
   User,
-  SearchResult,
+  Search,
    Vehicle,
-   Location
+   Location,
+   Footer,
+   Report,
+
    
   },
   methods:{

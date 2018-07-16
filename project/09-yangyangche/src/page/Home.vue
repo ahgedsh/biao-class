@@ -17,14 +17,14 @@
           </div>
           <div class='col-lg-9'>
 
-            <div class='content'>
-              <span class='tag'>大众</span>
-              <span class='tag'>别克</span>
-              <span class='tag'>雪佛兰</span>
-              <span class='tag'>福特</span>
-              <span class='tag'>五菱</span>
-              <span class='tag'>现代</span>
-              <span class='tag'>奥迪</span>
+            
+            <div class="content">
+             <router-link :key='row.id' 
+                         :to="'/search?brand_id=' + row.id" 
+                         v-for="row in list.brand" class="tag">{{row
+                .name}}
+              </router-link>
+
             </div>
             <div class='content-price'>
               <span class='tag'>3万以下</span>
@@ -34,12 +34,14 @@
               <span class='tag'>15-20万</span>
               <span class='tag'>20-30万</span>
             </div>
-            <div class='content-car'>
-              <span class='tag'>降价车</span>
-              <span class='tag'>准新车</span>
-              <span class='tag'>急售车</span>
-              <span class='tag'>紧凑车型</span>
-              <span class='tag'>中大型车</span>
+           
+            <div class="content-car">
+            <router-link :key='row.id' 
+                       :to="'/search?design_id=' + row.id" 
+                       v-for="row in list.design" class="tag">{{row
+                .name}}
+              </router-link>
+
             </div>
           </div>
 
@@ -65,7 +67,21 @@
 
     </div>
     <div class='guarantee'>
-      <div class=' row container'>
+      <div  class='  container'>
+       <div class='row' style='margin:0 -10px'>
+          <div class='col-lg-3'>
+          <div class='card'>
+            <div>
+              <div class='title'>分期购车</div>
+              <div clas='desc'>低门槛 审批快</div>
+              <div>
+                <img src='../assets/minicard.jpg'>
+              </div>
+            </div>
+          </div>
+
+       
+       </div>
         <div class='col-lg-3'>
           <div class='card'>
             <div>
@@ -102,18 +118,7 @@
           </div>
 
         </div>
-        <div class='col-lg-3'>
-          <div class='card'>
-            <div>
-              <div class='title'>分期购车</div>
-              <div clas='desc'>低门槛 审批快</div>
-              <div>
-                <img src='../assets/minicard.jpg'>
-              </div>
-            </div>
-          </div>
-
-        </div>
+       </div>
       </div>
     </div>
     <div>
@@ -124,49 +129,36 @@
           <div @click="read_main('between_5_10')" class='item'>5-10万超值车</div>
           <div @click="read_main('SUV')" class='item'>超值SUV</div>
           <div @click="read_main('urgent')" class='item'>急售降价车</div>
-          <router-link to="/search_result" class='item'>更多</router-link>
+          <router-link to="/search" class='item'>更多</router-link>
         </div>
       </div>
       <div class='container'>
-        <div class=' row vehicle-list'>
+        <div  class=' row  vehicle-list'>
 
           <div class='col-lg-3' :key='row.id' v-for='row in main_list'>
             <div class='card'>
               <div class='thumbnail'>
-                <img :src="row.preview && row.preview[0] ? row.preview[0].url : 'https://img2.rrcimg.com/o_1chkcvd8b2335648150394805140944773.jpg?imageView2/2/interlace/1/w/290/h/192/format/webp'">
+                <img :src="get_main_cover_url(row)">
               </div>
               <div class='detail'>
                 <div class='title'> {{row.title}}</div>
                 <div class='desc'>2013年十月/6.51万公里</div>
                 <div class='others '>
-                  <span class=' price'>{{row.price}}</span>
+                  <span class=' price'>{{row.price}}万</span>
                   <span>首付3.45万</span>
                 </div>
-                <button class='buy  btn btn-primary '>购买</button>
+                <router-link :to="'/detail/' + row.id"
+                class='btn btn-primary buy'>购买</router-link>
               </div>
             </div>
           </div>
-          <div class='col-lg-3'>
-            <div class='card'>
-              <div class='thumbnail'>
-                <img src='../assets/car.jpg'>
-              </div>
-              <div class='detail'>
-                <div class='title'> 福特-翼虎 2013年爆款 1.6L GTBi 两区风尚型</div>
-                <div class='desc'>2013年十月/6.51万公里</div>
-                <div class='others '>
-                  <span class=' price'>11.50万</span>
-                  <span>首付3.45万</span>
-                </div>
-                <button class='buy  btn btn-primary '>购买</button>
-              </div>
-            </div>
-          </div>
+          
 
         </div>
       </div>
 
     </div>
+    <Footer />
   </div>
 
 </template>
@@ -180,10 +172,15 @@
 /*eslint-disable*/
 import "../css/vehicle-list.css";
 import Nav from "../components/Nav.vue";
+import Footer from "../components/Footer.vue";
+
+import VehicleList from '../mixin/VehicleList';
+import Reader      from '../mixin/Reader';
 import api from "../lib/api";
 
 export default {
-  components: { Nav },
+  mixins:[VehicleList,Reader],
+  components: { Nav,Footer },
   mounted() {
     this.read_main('on_sale');
     this.find_design('suv');
@@ -192,8 +189,8 @@ export default {
   },
   data() {
     return {
-    design_list:[],
-    brand_list:[],
+    list:[],
+   
     design:{},
     main_list:[],
     };
@@ -203,21 +200,12 @@ export default {
     find_design(name) {
       api("design/search", { or: { name: name } }).then(r => {
         this.design[name] = r.data[0];
-        console.log(this.design);
+       
       });
     },
-   read (model) {
-        api(model + '/read', { key_by : 'name' })
-          .then(r => {
-            this[ model + '_list' ] = r.data;
-          });
-      },
+  
     
-    read_brand() {
-      api("brand/read").then(r => {
-        this.brand_list = r.data;
-      });
-    },
+    
     read_main(type) {
       console.log(type)
       let condition = {};
@@ -259,15 +247,21 @@ export default {
           };
           break;
           case'urgent':
+          let date=new Date;
+          date.setDate(date.getDate()+3);
+          date=date.toISOString().split('T')[0];
+          condition={query:`where("deadline"<="${date}")`};
+          
+          
           break;
       }
-      console.log(condition)
+      
       api('vehicle/read',condition)
       .then(r=>{
         
         this['main_list']=r.data;
-        console.log(r.data);
-      })
+       
+      });
          
     }
   }
@@ -332,6 +326,9 @@ export default {
 .guarantee .desc {
   font-size: 0.7rem;
   color: #999;
+}
+.vehicle-list{
+  margin: 0 -10px;
 }
 </style>
 

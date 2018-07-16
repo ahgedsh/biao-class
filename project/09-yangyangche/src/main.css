@@ -40,7 +40,14 @@ button[disabled="disabled"] {
 
 }
 
-
+.error-list{
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+ 
+}
+.error{
+  padding:10px 0;
+}
 .btn-primary{
     background: #fd521d;
     color: #fff;
